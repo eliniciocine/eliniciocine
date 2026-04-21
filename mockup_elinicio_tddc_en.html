@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every Document of Civilization — el inicio cine</title>
+<meta name="description" content="Every Document of Civilization by Tatiana Mazú González. FICUNAM Silver Puma. Documentary about enforced disappearance in Argentina. el inicio cine.">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="el inicio cine">
+<meta property="og:title" content="Every Document of Civilization — el inicio cine">
+<meta property="og:description" content="Every Document of Civilization · Tatiana Mazú · FICUNAM Silver Puma. About enforced disappearance in Argentina.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #999; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); -webkit-font-smoothing: antialiased; }
+
+nav {
+    padding: 1.25rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid var(--dark);
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    z-index: 100;
+}
+.logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 72px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover { color: var(--red); }
+
+/* STILLS */
+.stills-wrap { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1.5px solid var(--dark); }
+.still-item { aspect-ratio: 16 / 9; overflow: hidden; border-right: 1.5px solid var(--dark); }
+.still-item:last-child { border-right: none; }
+.still-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.still-item:hover img { transform: scale(1.04); }
+
+/* MAIN GRID */
+.film-main {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 3rem 4% 4rem;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 4rem;
+}
+
+.film-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.0;
+    margin-bottom: 0.5rem;
+}
+
+.film-meta {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.film-awards {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.film-synopsis {
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.95;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+.section-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.17rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.6rem;
+}
+
+.festival-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    align-items: baseline;
+}
+
+.festival-item:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+
+.fest-name {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.fest-section {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.fest-place {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.film-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 0.25rem;
+}
+
+.trailer-thumb {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1.5px solid var(--dark);
+}
+.trailer-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, filter 0.35s; filter: brightness(0.88); }
+.trailer-thumb:hover img { transform: scale(1.04); filter: brightness(0.65); }
+.play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.play-btn svg { width: 44px; height: 44px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.4)); transition: transform 0.3s; }
+.trailer-thumb:hover .play-btn svg { transform: scale(1.1); }
+
+.presskit-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    text-decoration: none;
+    color: var(--dark);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    transition: opacity 0.15s;
+}
+.presskit-btn:hover { opacity: 0.55; }
+.presskit-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+.presskit-sub { font-size: 0.68rem; font-weight: 300; color: var(--muted); }
+.download-arrow { margin-left: auto; font-size: 0.9rem; color: var(--muted); }
+
+.letterboxd-btn { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border: 1.5px solid var(--dark); text-decoration: none; color: var(--dark); transition: background 0.15s; }
+.letterboxd-btn:hover { background: rgba(0,0,0,0.04); }
+.letterboxd-left { display: flex; align-items: center; gap: 0.85rem; }
+.letterboxd-logo { width: 42px; height: auto; flex-shrink: 0; }
+.letterboxd-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+.letterboxd-sub { font-size: 0.68rem; font-weight: 300; color: var(--muted); }
+.letterboxd-arrow { color: var(--muted); font-size: 1rem; }
+
+@media (max-width: 900px) {
+    .film-main { grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+    .event-card { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 600px) {
+    .stills-wrap { grid-template-columns: repeat(3, 1fr); }
+    .nav-links { gap: 1.25rem; }
+}
+
+/* PRESS */
+.press-section { max-width: 1050px; margin: 0 auto; padding: 2rem 4% 0.5rem; }
+.press-link { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; padding: 0.7rem 0; border-bottom: 1px solid rgba(0,0,0,0.07); text-decoration: none; color: inherit; transition: opacity 0.15s; }
+.press-link:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+.press-link:hover { opacity: 0.55; }
+.press-title { font-size: 0.95rem; font-weight: 400; }
+.press-source { font-size: 0.72rem; font-weight: 300; color: var(--muted); flex-shrink: 0; }
+
+/* EVENTS */
+.events-section { border-top: 1.5px solid var(--dark); padding: 2.5rem 4% 3rem; margin-top: 2rem; }
+.events-inner { max-width: 1050px; margin: 0 auto; }
+.event-card { display: grid; grid-template-columns: 140px 1fr; gap: 3rem; padding: 2rem 0; border-bottom: 1px solid rgba(0,0,0,0.07); align-items: start; }
+.event-card:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+.event-date { font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.event-venue { font-size: 0.75rem; font-weight: 400; color: var(--dark); margin-top: 0.3rem; line-height: 1.4; }
+.event-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.85; color: #444; margin-bottom: 1.5rem; }
+.event-guests { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.25rem; }
+.guest-item { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; text-align: center; }
+.guest-item img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(0,0,0,0.08); }
+.guest-name { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--dark); max-width: 90px; line-height: 1.3; }
+.event-logos { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
+.event-logos img { height: 72px; width: auto; object-fit: contain; }
+
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-current { color: var(--dark); }
+.lang-sep { color: var(--muted); }
+.lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.lang-link:hover { color: var(--dark); }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="mockup_eliniciocine_en.html" class="logo"><img src="img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="mockup_eliniciocine_en.html#schedule">Screenings</a></li>
+            <li><a href="mockup_elinicio_eventos_en.html">Events</a></li>
+            <li><a href="mockup_eliniciocine_en.html#about">About us</a></li>
+            <li><a href="mockup_eliniciocine_en.html#services">Services</a></li>
+            <li><a href="mockup_eliniciocine_en.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <a href="mockup_elinicio_tddc.html" class="lang-link">ES</a>
+            <span class="lang-sep">·</span>
+            <span class="lang-current">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="stills-wrap">
+    <div class="still-item"><img src="img/stills/TDDC_ 15.jpg" alt=""></div>
+    <div class="still-item"><img src="img/stills/TDDC_ 16.jpg" alt=""></div>
+    <div class="still-item"><img src="img/stills/TDDC_ 21.jpg" alt=""></div>
+</div>
+
+<div class="film-main">
+
+    <div class="film-left">
+        <div class="film-title">Every Document of Civilization</div>
+        <div class="film-meta">Tatiana Mazú González · 2024 · Argentina · Documentary, Experimental</div>
+        <div class="film-awards">FICUNAM – Silver Puma for Best Film and Audience Award &nbsp;·&nbsp; FID Marseille – Georges de Beauregard Award &nbsp;·&nbsp; FICValdivia – Special Jury Mention &nbsp;·&nbsp; FICViña – Best Director Award</div>
+
+        <p class="film-synopsis">The story of a mother who lost her son at the hands of the police confronts the image of normality. Her struggle and her voice evoke the imagined worlds of Jules Verne, with which they once dreamed together. This film is a process of excavation — or the dissection of a landscape where, sixteen years ago, the Argentine state made Luciano Arruga disappear.</p>
+
+        <div class="section-tag">Festivals and screenings</div>
+
+        <div class="festival-item">
+            <div>
+                <div class="fest-name">FICUNAM</div>
+                <span class="fest-section">Silver Puma for Best Film</span>
+            </div>
+            <div class="fest-place">Mexico City · 2024</div>
+        </div>
+        <div class="festival-item">
+            <div>
+                <div class="fest-name">FID Marseille</div>
+                <span class="fest-section">International competition</span>
+            </div>
+            <div class="fest-place">France · 2024</div>
+        </div>
+        <div class="festival-item">
+            <div>
+                <div class="fest-name">DOK Leipzig</div>
+                <span class="fest-section">International competition</span>
+            </div>
+            <div class="fest-place">Germany · 2024</div>
+        </div>
+    </div>
+
+    <div class="film-right">
+
+        <a href="https://www.youtube.com/watch?v=oWMMvCQpl_E" target="_blank" class="trailer-thumb">
+            <img src="https://img.youtube.com/vi/oWMMvCQpl_E/maxresdefault.jpg" alt="Trailer — Every Document of Civilization">
+            <div class="play-btn">
+                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,0.88)"/>
+                    <polygon points="18,14 34,22 18,30" fill="#1a1a1a"/>
+                </svg>
+            </div>
+        </a>
+
+        <a href="img/Press kits/PresskitEspañolTodoDocumento_logo.pdf" class="presskit-btn" download target="_blank" rel="noopener">
+            <div>
+                <div class="presskit-label">Press Kit</div>
+                <div class="presskit-sub">PDF · Photos · Technical sheet</div>
+            </div>
+            <span class="download-arrow">↓</span>
+        </a>
+
+        <a href="https://boxd.it/Jp9Q" class="letterboxd-btn" target="_blank" rel="noopener">
+            <div class="letterboxd-left">
+                <svg class="letterboxd-logo" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#00E054"/><circle cx="28.5" cy="12" r="12" fill="#40BCF4"/><circle cx="45" cy="12" r="12" fill="#FF8000"/></svg>
+                <div>
+                    <div class="letterboxd-label">View on Letterboxd</div>
+                    <div class="letterboxd-sub">Reviews &amp; ratings</div>
+                </div>
+            </div>
+            <span class="letterboxd-arrow">↗</span>
+        </a>
+
+    </div>
+</div>
+
+<!-- PRESS -->
+<div class="press-section">
+    <div class="section-tag">Press</div>
+    <a href="https://lumbrecinema.mx/2025/08/04/critica-de-todo-documento-de-civilizacion-descubrir-el-pulso-de-la-no-imagen/" target="_blank" class="press-link">
+        <span class="press-title">Discovering the pulse of the non-image — Review of Every Document of Civilization</span>
+        <span class="press-source">Lumbre Cinema · Karim Aleixandre Rajme →</span>
+    </a>
+    <a href="https://lavidautil.net/los-documentos-de-todo-documento-de-civilizacion/" target="_blank" class="press-link">
+        <span class="press-title">The documents of Every Document of Civilization</span>
+        <span class="press-source">La vida útil · Lucía Salas →</span>
+    </a>
+    <a href="https://cultura.nexos.com.mx/en-la-oscuridad-abrir-una-puerta-entrevista-con-tatiana-mazu/" target="_blank" class="press-link">
+        <span class="press-title">In the dark, opening a door — Interview with Tatiana Mazú</span>
+        <span class="press-source">Nexos · Nicolás Ruiz →</span>
+    </a>
+    <a href="https://revistareplicante.com/tatiana-mazu-todo-documento-de-civilizacion/" target="_blank" class="press-link">
+        <span class="press-title">Interview with Tatiana Mazú</span>
+        <span class="press-source">Revista Replicante · Alberto Acuña →</span>
+    </a>
+</div>
+
+<!-- EVENTS -->
+<div class="events-section">
+    <div class="events-inner">
+        <div class="section-tag">Events</div>
+
+        <div class="event-card">
+            <div>
+                <div class="event-date">November 2025</div>
+                <div class="event-venue"><a href="mockup_elinicio_evento_tddc_en.html" style="text-decoration:none;color:inherit;">Special screening + conversation<br>Centro de Cultura Digital · Mexico City</a></div>
+            </div>
+            <div>
+                <p class="event-desc">In partnership with Centro de Cultura Digital and the collective Antes Muertx Cine, a special screening of Every Document of Civilization, directed by Tatiana Mazú, was held. Following the screening, Tatiana Mazú was joined in conversation by Mexican journalist Daniela Rea and activist and scholar Alicia de los Ríos.</p>
+                <div class="event-guests">
+                    <div class="guest-item">
+                        <img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/TATIANA MAZÚ .jpg" alt="Tatiana Mazú">
+                        <span class="guest-name">Tatiana Mazú</span>
+                    </div>
+                    <div class="guest-item">
+                        <img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/DANIELA REA.png" alt="Daniela Rea">
+                        <span class="guest-name">Daniela Rea</span>
+                    </div>
+                    <div class="guest-item">
+                        <img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ALICIA DE LOS RÍOS MERINO.png" alt="Alicia de los Ríos">
+                        <span class="guest-name">Alicia de los Ríos</span>
+                    </div>
+                </div>
+                <div class="event-logos">
+                    <img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/CCD.gif" alt="Centro de Cultura Digital">
+                    <img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ANTES MUERTO FINAL (1).png" alt="Antes Muertx Cine">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

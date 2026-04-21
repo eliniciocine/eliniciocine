@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — el inicio cine</title>
+<meta name="description" content="el inicio cine events: special screenings, conversations and workshops around our films in Mexico.">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="el inicio cine">
+<meta property="og:title" content="Events — el inicio cine">
+<meta property="og:description" content="Special screenings, conversations, and workshops around the films we distribute.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #999; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); -webkit-font-smoothing: antialiased; }
+nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid var(--dark); position: sticky; top: 0; background: var(--cream); z-index: 100; }
+.logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 72px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--red); }
+
+.page-header {
+    padding: 3rem 4% 2rem;
+    border-bottom: 1.5px solid var(--dark);
+}
+.page-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--dark);
+}
+.page-sub {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 0.6rem;
+}
+
+/* EVENTS LIST */
+.events-list {
+    border-bottom: 1.5px solid var(--dark);
+}
+
+.event-row {
+    display: grid;
+    grid-template-columns: 90px 240px 1fr 3rem;
+    gap: 0 2rem;
+    align-items: center;
+    padding: 1.5rem 4%;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+.event-row:last-child { border-bottom: none; }
+.event-row:hover { background: rgba(0,0,0,0.015); }
+
+.row-date {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.row-img {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.row-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s ease, filter 0.3s;
+}
+.event-row:hover .row-img img { transform: scale(1.05); filter: brightness(0.8); }
+
+.row-body { padding: 0 0.5rem; }
+.row-film-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.3rem;
+}
+.row-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+.row-venue {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+.row-excerpt {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.row-cta {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+    transition: color 0.15s;
+    justify-self: end;
+}
+.event-row:hover .row-cta { color: var(--red); }
+
+@media (max-width: 900px) {
+    .event-row { grid-template-columns: 70px 160px 1fr; }
+    .row-cta { display: none; }
+}
+@media (max-width: 580px) {
+    .event-row { grid-template-columns: 1fr; gap: 0.75rem; }
+    .row-date { display: none; }
+    .nav-links { gap: 1.25rem; }
+}
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-current { color: var(--dark); }
+.lang-sep { color: var(--muted); }
+.lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.lang-link:hover { color: var(--dark); }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="mockup_eliniciocine_en.html" class="logo"><img src="img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="mockup_eliniciocine_en.html#schedule">Screenings</a></li>
+            <li><a href="mockup_elinicio_eventos_en.html" class="active">Events</a></li>
+            <li><a href="mockup_eliniciocine_en.html#about">About us</a></li>
+            <li><a href="mockup_eliniciocine_en.html#services">Services</a></li>
+            <li><a href="mockup_eliniciocine_en.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <a href="mockup_elinicio_eventos.html" class="lang-link">ES</a>
+            <span class="lang-sep">·</span>
+            <span class="lang-current">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="page-title">Events</div>
+    <div class="page-sub">Special screenings, conversations, and workshops around our films.</div>
+</div>
+
+<div class="events-list">
+
+    <a href="mockup_elinicio_evento_lhdle_en.html" class="event-row">
+        <div class="row-date">Feb<br>2026</div>
+        <div class="row-img"><img src="img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG" alt=""></div>
+        <div class="row-body">
+            <div class="row-film-tag">The Hour of the Star</div>
+            <h2 class="row-title">Special screening + talk</h2>
+            <div class="row-venue">Cine Lido, Centro Cultural Bella Época · Mexico City</div>
+            <p class="row-excerpt">A special screening followed by a conversation between María Novaro, Brenda Lozano, and Lilia Lustosa about the connections between the work of Suzana Amaral and Clarice Lispector.</p>
+        </div>
+        <span class="row-cta">See →</span>
+    </a>
+
+    <a href="mockup_elinicio_evento_tddc_en.html" class="event-row">
+        <div class="row-date">Nov<br>2025</div>
+        <div class="row-img"><img src="img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/3F8DBC98-3036-43BA-848D-B76ECB329800 2.JPG" alt=""></div>
+        <div class="row-body">
+            <div class="row-film-tag">Every Document of Civilization</div>
+            <h2 class="row-title">Special screening + conversation</h2>
+            <div class="row-venue">Centro de Cultura Digital · Mexico City</div>
+            <p class="row-excerpt">A conversation between Tatiana Mazú, Daniela Rea, and Alicia de los Ríos about cinema and enforced disappearance in Latin America.</p>
+        </div>
+        <span class="row-cta">See →</span>
+    </a>
+
+    <a href="mockup_elinicio_evento_novias3_en.html" class="event-row">
+        <div class="row-date">Sep<br>2025</div>
+        <div class="row-img"><img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Taller/00168F5F-BCD5-47C6-95F7-A11D96D7F734.JPG" alt=""></div>
+        <div class="row-body">
+            <div class="row-film-tag">Southern Brides</div>
+            <h2 class="row-title">Workshop: First-Person Storytelling</h2>
+            <div class="row-venue">Centro Cultural de España · Mexico City</div>
+            <p class="row-excerpt">Elena López Riera led ten emerging Mexican filmmakers in the development of their documentary projects.</p>
+        </div>
+        <span class="row-cta">See →</span>
+    </a>
+
+    <a href="mockup_elinicio_evento_novias2_en.html" class="event-row">
+        <div class="row-date">Sep<br>2025</div>
+        <div class="row-img"><img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg" alt=""></div>
+        <div class="row-body">
+            <div class="row-film-tag">Southern Brides</div>
+            <h2 class="row-title">Retrospective + talk</h2>
+            <div class="row-venue">Centro Cultural de España · Mexico City</div>
+            <p class="row-excerpt">A retrospective of Elena's documentary work — Pueblo, Las vísceras, Those Who Desire — and a talk with writer Natalia Durand.</p>
+        </div>
+        <span class="row-cta">See →</span>
+    </a>
+
+    <a href="mockup_elinicio_evento_novias1_en.html" class="event-row">
+        <div class="row-date">Sep<br>2025</div>
+        <div class="row-img"><img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg" alt=""></div>
+        <div class="row-body">
+            <div class="row-film-tag">Southern Brides</div>
+            <h2 class="row-title">National premiere + Q&amp;A</h2>
+            <div class="row-venue">Cineteca Nacional · Mexico City</div>
+            <p class="row-excerpt">National premiere with a Q&A between Elena López Riera and the audience, moderated by film critic Oralia Torres.</p>
+        </div>
+        <span class="row-cta">See →</span>
+    </a>
+
+</div>
+
+</body>
+</html>

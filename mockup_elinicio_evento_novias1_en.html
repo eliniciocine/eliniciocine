@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National premiere + Q&A — Southern Brides — el inicio cine</title>
+<meta name="description" content="el inicio cine film event — special screening, conversation or workshop.">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="el inicio cine">
+<meta property="og:title" content="Event — el inicio cine">
+<meta property="og:description" content="el inicio cine special event.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #999; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); -webkit-font-smoothing: antialiased; }
+nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid var(--dark); position: sticky; top: 0; background: var(--cream); z-index: 100; }
+.logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 72px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--red); }
+
+.event-hero { width: 100%; aspect-ratio: 21 / 7; overflow: hidden; border-bottom: 1.5px solid var(--dark); }
+.event-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.event-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 4% 5rem; }
+
+.back-link { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 2rem; transition: color 0.15s; }
+.back-link:hover { color: var(--dark); }
+
+.event-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+.event-date { font-family: 'Space Grotesk', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.event-film-tag { font-family: 'Space Grotesk', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue); }
+.event-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 0.4rem; }
+.event-venue { font-size: 0.85rem; font-weight: 300; color: var(--muted); margin-bottom: 2.5rem; }
+
+.event-description { font-size: 1.02rem; font-weight: 300; line-height: 1.95; color: #444; margin-bottom: 3.5rem; }
+.event-description p + p { margin-top: 1.25rem; }
+
+.section-tag { font-family: 'Space Grotesk', sans-serif; font-size: 1.17rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; }
+
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; border: 1.5px solid var(--dark); margin-bottom: 3.5rem; }
+.photo-grid-item { aspect-ratio: 4 / 3; overflow: hidden; }
+.photo-grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.photo-grid-item:hover img { transform: scale(1.04); }
+.photo-grid-item.span2 { grid-column: span 2; }
+
+.guests-grid { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.guest-item { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; text-align: center; max-width: 130px; }
+.guest-photo { width: 108px; height: 108px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--dark); }
+.guest-name { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700; line-height: 1.3; }
+.guest-role { font-size: 0.72rem; font-weight: 300; color: var(--muted); line-height: 1.4; }
+
+.logos-row { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+.logos-row img { height: 72px; width: auto; object-fit: contain; display: block; }
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.93);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+}
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+}
+.photo-grid-item { cursor: zoom-in; }
+
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-current { color: var(--dark); }
+.lang-sep { color: var(--muted); }
+.lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.lang-link:hover { color: var(--dark); }
+
+@media (max-width: 700px) {
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { gap: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="mockup_eliniciocine_en.html" class="logo"><img src="img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="mockup_eliniciocine_en.html#schedule">Screenings</a></li>
+            <li><a href="mockup_elinicio_eventos_en.html" class="active">Events</a></li>
+            <li><a href="mockup_eliniciocine_en.html#about">About us</a></li>
+            <li><a href="mockup_eliniciocine_en.html#services">Services</a></li>
+            <li><a href="mockup_eliniciocine_en.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <a href="mockup_elinicio_evento_novias1.html" class="lang-link">ES</a>
+            <span class="lang-sep">·</span>
+            <span class="lang-current">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="event-hero">
+    <img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg" alt="National premiere Southern Brides">
+</div>
+
+<div class="event-wrap">
+
+    <a href="mockup_elinicio_eventos_en.html" class="back-link">← All events</a>
+
+    <div class="event-meta">
+        <span class="event-date">September 2025</span>
+        <span class="event-film-tag">Southern Brides</span>
+    </div>
+    <h1 class="event-title">National premiere + Q&amp;A</h1>
+    <div class="event-venue">Cineteca Nacional · Mexico City</div>
+
+    <div class="event-description">
+        <p>The film had its national premiere at Cineteca Nacional, where Elena López Riera engaged in a conversation with attendees, moderated by Mexican film critic Oralia Torres.</p>
+    </div>
+
+    <div class="section-tag">Images</div>
+    <div class="photo-grid">
+        <div class="photo-grid-item span2"><img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="photo-grid-item"><img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png" alt="" onclick="openLightbox(this.src)"></div>
+    </div>
+
+    <div class="section-tag">Guests</div>
+    <div class="guests-grid">
+        <div class="guest-item">
+            <img class="guest-photo" src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png" alt="Elena López Riera">
+            <div class="guest-name">Elena López Riera</div>
+            <div class="guest-role">Director</div>
+        </div>
+        <div class="guest-item">
+            <img class="guest-photo" src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Oralia Torres.webp" alt="Oralia Torres">
+            <div class="guest-name">Oralia Torres</div>
+            <div class="guest-role">Film critic</div>
+        </div>
+    </div>
+
+    <div class="section-tag">Partners</div>
+    <div class="logos-row">
+        <img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Copia de LOGOS.png" alt="">
+        <img src="img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/LOGO-Marvin&Wayne-negro-sin-fondo.png" alt="Marvin & Wayne">
+    </div>
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

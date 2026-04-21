@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>el inicio cine — Independent Film Distribution in Mexico</title>
+<meta name="description" content="el inicio cine is a Mexican independent film distribution company. We support art-house films in reaching audiences through exhibition circuits, partnerships, and strategy.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="el inicio cine">
+<meta property="og:title" content="el inicio cine — Independent Film Distribution in Mexico">
+<meta property="og:description" content="Mexican film distribution company supporting art-house films through exhibition circuits, partnerships, and strategy.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "el inicio cine",
+  "description": "Mexican independent film distribution company supporting art-house films in reaching audiences across Mexico.",
+  "url": "https://eliniciocine.com",
+  "sameAs": ["https://instagram.com/eliniciocine"],
+  "contactPoint": [
+    { "@type": "ContactPoint", "email": "distribucion@eliniciocine.com", "contactType": "distribution" },
+    { "@type": "ContactPoint", "email": "arantxa@eliniciocine.com", "contactType": "communications" }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --cream: #ffffff;
+    --red: #C8392A;
+    --blue: #5B70D4;
+    --dark: #1a1a1a;
+    --muted: #888;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+    padding: 1.25rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid var(--dark);
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    z-index: 100;
+}
+
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 72px; width: auto; display: block; }
+
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--red); }
+
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-current { color: var(--dark); }
+.lang-sep { color: var(--muted); }
+.lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.lang-link:hover { color: var(--dark); }
+
+/* HERO */
+.hero {
+    padding: 3.5rem 4% 2.5rem;
+    border-bottom: 1.5px solid var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    max-width: 600px;
+}
+
+.hero h1 em {
+    font-style: normal;
+    color: var(--red);
+}
+
+.hero-sub {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 260px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* SECTION LABEL */
+.section-label {
+    padding: 1rem 4%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1.5px solid var(--dark);
+}
+
+/* FILM GRID */
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 2.5rem 4% 3rem;
+}
+
+.film-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+.film-card.coming-soon::after {
+    content: 'Coming Soon';
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: var(--blue);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+}
+
+.film-poster {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+}
+
+.film-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.film-card:hover .film-poster img { transform: scale(1.04); }
+
+.film-info { padding: 0; }
+
+.film-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.2rem;
+    color: var(--dark);
+}
+
+.film-meta {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* SERVICES */
+.services-section {
+    padding: 4rem 4%;
+    border-bottom: 1.5px solid var(--dark);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.service-card {
+    padding: 2rem 2rem 2.5rem;
+    border-right: 1.5px solid var(--dark);
+}
+
+.service-card:last-child { border-right: none; }
+
+.service-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--blue);
+    margin-bottom: 1.25rem;
+}
+
+.service-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ABOUT */
+.about-section {
+    padding: 4rem 4%;
+    border-bottom: 1.5px solid var(--dark);
+}
+
+.about-intro {
+    max-width: 720px;
+    margin-bottom: 3.5rem;
+}
+
+.about-intro p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #444;
+}
+
+.about-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.team-member-photo { width: 108px; height: 108px; border-radius: 50%; object-fit: cover; margin-bottom: 0.85rem; border: 1px solid rgba(0,0,0,0.08); display: block; }
+.team-member h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+    color: var(--dark);
+}
+
+.team-member .role {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.team-member p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* CALENDAR */
+.calendar-wrap {
+    padding: 0 4%;
+    border-bottom: 1.5px solid var(--dark);
+}
+
+.cal-month-header {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 1.25rem 0 0.75rem;
+    border-bottom: 1.5px solid var(--dark);
+}
+
+.cal-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 120px;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.12s;
+}
+.cal-row:last-child { border-bottom: none; }
+.cal-row:hover { background: rgba(0,0,0,0.015); }
+
+.cal-date-box { display: flex; flex-direction: column; align-items: flex-start; gap: 0.05rem; flex-shrink: 0; }
+.cal-day-num { font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: var(--dark); }
+.cal-day-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.cal-info-title { font-family: 'Space Grotesk', sans-serif; font-size: 0.92rem; font-weight: 700; letter-spacing: -0.01em; color: var(--dark); line-height: 1.2; }
+.cal-info-film { font-size: 0.78rem; font-weight: 300; color: var(--blue); margin-top: 0.1rem; }
+.cal-info-venue { font-size: 0.72rem; font-weight: 300; color: var(--muted); margin-top: 0.1rem; }
+.cal-thumb { aspect-ratio: 16 / 9; overflow: hidden; flex-shrink: 0; }
+.cal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.cal-row:hover .cal-thumb img { transform: scale(1.05); }
+
+.cal-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+}
+
+/* CONTACT */
+.contact-section {
+    padding: 4rem 4%;
+    border-bottom: 1.5px solid var(--dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-intro h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.contact-intro p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.contact-detail {
+    font-size: 0.85rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.contact-detail a { color: var(--red); text-decoration: none; }
+
+.contact-detail span {
+    color: var(--muted);
+    font-weight: 300;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem 0; border: none; border-bottom: 1.5px solid var(--dark); background: transparent; font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 300; color: var(--dark); outline: none; transition: border-color 0.15s; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #bbb; }
+.contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--red); }
+.contact-form textarea { resize: none; height: 100px; }
+.contact-form button { align-self: flex-start; padding: 0.75rem 2rem; background: var(--red); color: #fff; border: none; font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s; }
+.contact-form button:hover { opacity: 0.85; }
+.contact-form button:disabled { opacity: 0.5; cursor: not-allowed; }
+.form-msg { font-size: 0.82rem; font-weight: 300; margin-top: 0.25rem; display: none; }
+.form-msg.success { color: #2a7a2a; display: block; }
+.form-msg.error { color: var(--red); display: block; }
+
+/* FOOTER */
+footer { padding: 1.5rem 4%; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--muted); }
+footer a { color: var(--red); text-decoration: none; }
+
+@media (max-width: 1100px) { .film-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) {
+    .about-team { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-section { grid-template-columns: 1fr; gap: 2.5rem; }
+    .services-section { grid-template-columns: 1fr; }
+    .service-card { border-right: none; border-bottom: 1.5px solid var(--dark); }
+    .service-card:last-child { border-bottom: none; }
+}
+@media (max-width: 600px) {
+    .hero { flex-direction: column; align-items: flex-start; }
+    .hero-sub { text-align: left; }
+    .film-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; padding: 1.5rem 4% 2rem; }
+    .nav-links { gap: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="mockup_eliniciocine_en.html" class="logo"><img src="img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="#schedule">Screenings</a></li>
+            <li><a href="mockup_elinicio_eventos_en.html">Events</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <a href="mockup_eliniciocine.html" class="lang-link">ES</a>
+            <span class="lang-sep">·</span>
+            <span class="lang-current">EN</span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>For us,<br>distribution is<br>the beginning.</h1>
+    <p class="hero-sub">Exhibition circuits.<br>Audiences. Partnerships.<br>Strategy.</p>
+</div>
+
+<!-- CATALOGUE -->
+<div id="catalogue"></div>
+
+<div class="film-grid">
+
+    <a href="mockup_elinicio_lhdle_en.html" class="film-card">
+        <div class="film-poster">
+            <img src="img/HoraDaEstrela_Alternativo_64x94.png" alt="The Hour of the Star">
+        </div>
+        <div class="film-info">
+            <div class="film-title">The Hour of the Star</div>
+            <div class="film-meta">Suzana Amaral<br>Brazil · 1985</div>
+        </div>
+    </a>
+
+    <a href="mockup_elinicio_filmpage_en.html" class="film-card">
+        <div class="film-poster">
+            <img src="img/LNDS_ AFICHE_ EIC.png" alt="Southern Brides">
+        </div>
+        <div class="film-info">
+            <div class="film-title">Southern Brides</div>
+            <div class="film-meta">Elena López Riera<br>Spain · 2024</div>
+        </div>
+    </a>
+
+    <a href="mockup_elinicio_tddc_en.html" class="film-card">
+        <div class="film-poster">
+            <img src="img/TDDC_ AFICHE_ EIC.png" alt="Every Document of Civilization">
+        </div>
+        <div class="film-info">
+            <div class="film-title">Every Document of Civilization</div>
+            <div class="film-meta">Tatiana Mazú González<br>Argentina · 2024</div>
+        </div>
+    </a>
+
+    <a href="mockup_elinicio_sna_en.html" class="film-card coming-soon">
+        <div class="film-poster">
+            <img src="img/SNA_Poster-Collage_LOGOELINICIO.png" alt="If We Don't Burn">
+        </div>
+        <div class="film-info">
+            <div class="film-title">If We Don't Burn, How Do We Light Up the Night</div>
+            <div class="film-meta">Kim Torres<br>Mexico · 2025</div>
+        </div>
+    </a>
+
+    <a href="mockup_elinicio_saygoodbye_en.html" class="film-card coming-soon">
+        <div class="film-poster">
+            <img src="img/SAY-GOODBYE-02-VFB.png" alt="Say Goodbye">
+        </div>
+        <div class="film-info">
+            <div class="film-title">Say Goodbye</div>
+            <div class="film-meta">Paloma López Carrillo<br>Mexico · 2025</div>
+        </div>
+    </a>
+
+</div>
+
+<!-- SCHEDULE -->
+<div class="section-label" id="schedule" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Screenings</div>
+
+<div class="calendar-wrap">
+    <div class="cal-month-header">April 2026</div>
+    <div class="cal-columns">
+
+    <a href="mockup_elinicio_saygoodbye_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">4</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">Visions Du Réel</div>
+            <div class="cal-info-film">Say Goodbye</div>
+            <div class="cal-info-venue">Nyon, Switzerland</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/SAYGOODBYE STILLS09.png" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_saygoodbye_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">11</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">FICUNAM</div>
+            <div class="cal-info-film">Say Goodbye</div>
+            <div class="cal-info-venue">Cineteca Nacional · Mexico City</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/SAYGOODBYE STILLS10.png" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_saygoodbye_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">12</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">FICUNAM</div>
+            <div class="cal-info-film">Say Goodbye</div>
+            <div class="cal-info-venue">Cineteca Nacional · Mexico City</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/SAYGOODBYE STILLS30.png" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_filmpage_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">16</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">Special screening</div>
+            <div class="cal-info-film">Southern Brides</div>
+            <div class="cal-info-venue">Cineteca Nacional · Mexico City</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/Still 1 - Las novias del sur.png" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_filmpage_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">17</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">Special screening</div>
+            <div class="cal-info-film">Southern Brides</div>
+            <div class="cal-info-venue">Cineteca Nacional · Mexico City</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/Still 3 - Las novias del sur.jpg" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_sna_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">19</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">Los Cabos IFF</div>
+            <div class="cal-info-film">If We Don't Burn, How Do We Light Up the Night</div>
+            <div class="cal-info-venue">Los Cabos, Mexico</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/SNA still.jpg" alt=""></div>
+    </a>
+
+    <a href="mockup_elinicio_tddc_en.html" class="cal-row">
+        <div class="cal-date-box">
+            <div class="cal-day-num">24</div>
+            <div class="cal-day-label">Apr</div>
+        </div>
+        <div class="cal-info">
+            <div class="cal-info-title">DOK Leipzig</div>
+            <div class="cal-info-film">Every Document of Civilization</div>
+            <div class="cal-info-venue">Leipzig, Germany</div>
+        </div>
+        <div class="cal-thumb"><img src="img/stills/TDDC_ 15.jpg" alt=""></div>
+    </a>
+
+    </div><!-- /.cal-columns -->
+</div>
+
+<!-- ABOUT US -->
+<div class="section-label" id="about">About Us</div>
+
+<div class="about-section">
+    <div class="about-intro">
+        <p>We are el inicio cine, a Mexican film distribution company that supports films in reaching exhibition spaces across Mexico. We design and plan programming circuits, develop communication strategies, build partnerships, and create educational activities to celebrate the life of films. We are driven by the belief that other forms of distribution are possible — distribution that is not voracious but caring; distribution that places the film and its possibilities beyond the screen at the center.</p>
+    </div>
+
+    <div class="about-team">
+        <div class="team-member">
+            <img class="team-member-photo" src="img/el inicio inglés/Mare El Inicio.jpg" alt="Mare Sánchez-Armáss">
+            <h3>Mare Sánchez-Armáss</h3>
+            <div class="role">Distribution</div>
+            <p>She has coordinated and planned the distribution of more than 30 national and international fiction, documentary, and animated films within both commercial and independent circuits in Mexico, working with distribution companies such as Interior XIII and Pimienta Films. Trained at the Industry Academy of the Locarno Film Festival, the Públicos del Futuro Seminar at FICUNAM, and the Intensive Distribution Clinic of the Ibermedia Program. She has also collaborated as a consultant with La Corriente del Golfo, Ambulante, Machete Cine, and others.</p>
+        </div>
+        <div class="team-member">
+            <img class="team-member-photo" src="img/el inicio inglés/Aranxa El Inicio.JPG" alt="Arantxa Luna">
+            <h3>Arantxa Luna</h3>
+            <div class="role">Communications &amp; Partnerships</div>
+            <p>Writer, researcher, and cultural manager specializing in film. She has collaborated with FICUNAM, Ambulante Documentary Tour, FICM, and the Mar del Plata International Film Festival. Author of essayistic texts in Nexos, Letras Libres, Revista de la Universidad, and Cine PREMIÈRE. She has developed communication strategies, press management, and educational partnerships for titles by Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda, and others.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section-label" id="services">Services</div>
+
+<div class="services-section">
+    <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>Distribution</h3>
+        <p>We support films from their release through their life in Mexico's exhibition circuits. We plan programming circuits, manage exhibition spaces, and build partnerships to connect each film with its audience.</p>
+    </div>
+    <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Digital strategy</h3>
+        <p>We design the digital presence of films: communication, social media, launch campaigns, and materials. We create strategies that accompany the film's life before, during, and after its release.</p>
+    </div>
+    <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Consulting</h3>
+        <p>We offer specialized advisory services in film distribution and communication for production companies, festivals, and filmmakers seeking to map their exhibition path with intention and clarity.</p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-label" id="contact">Contact</div>
+
+<div class="contact-section">
+    <div class="contact-intro">
+        <h2>Let's talk.</h2>
+        <p>For screenings, distribution, workshops, or any collaboration.</p>
+        <div class="contact-detail"><span>Distribution</span><a href="mailto:distribucion@eliniciocine.com">distribucion@eliniciocine.com</a></div>
+        <div class="contact-detail"><span>Arantxa</span><a href="mailto:arantxa@eliniciocine.com">arantxa@eliniciocine.com</a></div>
+        <div class="contact-detail"><span>Mare</span><a href="mailto:mare@eliniciocine.com">mare@eliniciocine.com</a></div>
+        <div class="contact-detail"><span>Instagram</span><a href="#">@eliniciocine</a></div>
+    </div>
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="0f865944-2460-4e60-b2e6-c5e765e71999">
+        <input type="hidden" name="subject" value="New message — el inicio cine">
+        <input type="hidden" name="from_name" value="el inicio cine">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" id="submit-btn">Send</button>
+        <p class="form-msg" id="form-msg"></p>
+    </form>
+</div>
+
+<footer>
+    <span>© 2025 el inicio cine</span>
+    <a href="#">Instagram</a>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const msg = document.getElementById('form-msg');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    msg.className = 'form-msg';
+    msg.textContent = '';
+    try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(Object.fromEntries(new FormData(this)))
+        });
+        const data = await res.json();
+        if (data.success) {
+            msg.textContent = 'Message sent. We\'ll be in touch soon.';
+            msg.classList.add('success');
+            this.reset();
+        } else {
+            throw new Error();
+        }
+    } catch (err) { console.error(err);
+        msg.textContent = 'Something went wrong. Please write to us directly at mare@eliniciocine.com';
+        msg.classList.add('error');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send';
+    }
+});
+</script>
+</body>
+</html>
