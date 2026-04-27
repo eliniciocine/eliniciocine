@@ -656,7 +656,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="nav-right">
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="#cartelera">Cartelera</a></li>
-<li><a data-en="Events" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
 <li><a data-en="About Us" data-es="Quiénes somos" href="#quienes">Quiénes somos</a></li>
 <li><a data-en="Services" data-es="Servicios" href="#servicios">Servicios</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="#contacto">Contacto</a></li>
@@ -670,7 +670,7 @@ footer a { color: var(--red); text-decoration: none; }
 <p class="hero-sub" data-en="Exhibition circuits.&lt;br/&gt;Audiences. Partnerships.&lt;br/&gt;Strategy." data-es="Circuitos de exhibición.&lt;br/&gt;Públicos. Alianzas.&lt;br/&gt;Estrategia.">Circuitos de exhibición.<br/>Públicos. Alianzas.<br/>Estrategia.</p>
 </div>
 <!-- CATÁLOGO -->
-<div class="section-label" data-en="" data-es="Nuestro catálogo" id="catalogo" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Nuestro catálogo</div>
+<div class="section-label" data-en="Our catalog" data-es="Nuestro catálogo" id="catalogo" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Nuestro catálogo</div>
 <div class="film-grid">
 <a class="film-card" href="/la-hora-de-la-estrella/">
 <div class="film-poster">
@@ -865,9 +865,9 @@ footer a { color: var(--red); text-decoration: none; }
 <input name="subject" type="hidden" value="Nuevo mensaje — el inicio cine"/>
 <input name="from_name" type="hidden" value="el inicio cine"/>
 <input name="botcheck" style="display:none" type="checkbox"/>
-<input name="name" placeholder="Nombre" required="" type="text"/>
+<input name="name" placeholder="Nombre" data-es="Nombre" data-en="Name" required="" type="text"/>
 <input name="email" placeholder="Email" required="" type="email"/>
-<textarea name="message" placeholder="Mensaje" required=""></textarea>
+<textarea name="message" placeholder="Mensaje" data-es="Mensaje" data-en="Message" required=""></textarea>
 <button data-en="Send" data-es="Enviar" id="submit-btn" type="submit">Enviar</button>
 <p class="form-msg" id="form-msg"></p>
 </form>
@@ -882,7 +882,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const btn = document.getElementById('submit-btn');
     const msg = document.getElementById('form-msg');
     btn.disabled = true;
-    btn.textContent = 'Enviando…';
+    btn.textContent = (localStorage.getItem('eic-lang')||'es')==='en' ? 'Sending…' : 'Enviando…';
     msg.className = 'form-msg';
     msg.textContent = '';
     try {
@@ -893,18 +893,18 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         });
         const data = await res.json();
         if (data.success) {
-            msg.textContent = 'Mensaje enviado. Nos ponemos en contacto pronto.';
+            msg.textContent = (localStorage.getItem('eic-lang')||'es')==='en' ? 'Message sent. We\'ll be in touch soon.' : 'Mensaje enviado. Nos ponemos en contacto pronto.';
             msg.classList.add('success');
             this.reset();
         } else {
             throw new Error();
         }
     } catch (err) { console.error(err);
-        msg.textContent = 'Hubo un error. Por favor escríbenos directo a mare@eliniciocine.com';
+        msg.textContent = (localStorage.getItem('eic-lang')||'es')==='en' ? 'There was an error. Please write to us directly at mare@eliniciocine.com' : 'Hubo un error. Por favor escríbenos directo a mare@eliniciocine.com';
         msg.classList.add('error');
     } finally {
         btn.disabled = false;
-        btn.textContent = 'Enviar';
+        btn.textContent = (localStorage.getItem('eic-lang')||'es')==='en' ? 'Send' : 'Enviar';
     }
 });
 </script>
@@ -914,7 +914,9 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   function setLang(l){
     lang=l; localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
     document.documentElement.lang=l;
   }
   document.addEventListener('DOMContentLoaded',function(){
@@ -928,7 +930,9 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   function setLang(l){
     lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
     document.documentElement.lang=l;
   }
   document.addEventListener('DOMContentLoaded',function(){

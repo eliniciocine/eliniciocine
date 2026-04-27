@@ -156,7 +156,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 <div class="nav-right">
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
-<li><a class="active" data-en="Events" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a class="active" data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
 <li><a data-en="About us" data-es="Quiénes somos" href="/#quienes">Quiénes somos</a></li>
 <li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
@@ -165,7 +165,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </div>
 </nav>
 <div class="page-header">
-<div class="page-title" data-en="Events" data-es="Alianzas">Alianzas</div>
+<div class="page-title" data-en="Partnerships" data-es="Alianzas">Alianzas</div>
 <div class="page-sub" data-en="Special screenings, conversations, and workshops around our films." data-es="Funciones especiales, conversatorios y talleres alrededor de nuestras películas.">Funciones especiales, conversatorios y talleres alrededor de nuestras películas.</div>
 </div>
 <div class="events-list">
@@ -231,7 +231,9 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
   function setLang(l){
     lang=l; localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
     document.documentElement.lang=l;
   }
   document.addEventListener('DOMContentLoaded',function(){
@@ -245,7 +247,9 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
   function setLang(l){
     lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
     document.documentElement.lang=l;
   }
   document.addEventListener('DOMContentLoaded',function(){
