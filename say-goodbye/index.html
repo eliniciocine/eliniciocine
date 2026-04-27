@@ -214,7 +214,7 @@ nav {
 <li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
 </ul>
-<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .15rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
 </div>
 </nav>
 <div class="stills-wrap">
@@ -225,7 +225,7 @@ nav {
 <div class="film-main">
 <div class="film-left">
 <div class="proximamente-tag">Próximamente</div>
-<div class="film-title">Say Goodbye (Decir adiós)</div>
+<div class="film-title" data-en="Say Goodbye" data-es="Say Goodbye (Decir adiós)">Say Goodbye (Decir adiós)</div>
 <div class="film-meta">Paloma López Carrillo · 2025 · México · Documental</div>
 <div class="film-awards">Visions Du Réel 2025  ·  FICUNAM · Ahora México 2025  ·  Premio Jurado Joven · Ecuador</div>
 <p class="film-synopsis" data-en="Beneath snow-covered mountains, a family confronts the void left by disappearance. Say Goodbye follows Rosa, Sol, and Javier on an intimate journey where silence, memory, and love intertwine to shape grief. A story about an absence that never fully leaves." data-es="Una madre y su hija están a punto de separarse. Say Goodbye acompaña ese momento con una cámara que no juzga ni explica, sino que simplemente se queda. Paloma López Carrillo filma lo que generalmente no se filma: el tiempo antes del adiós, los gestos que no saben que son últimos, las palabras que se quedan cortas. Una película sobre la migración vista desde adentro, desde la despedida que no termina.">Una madre y su hija están a punto de separarse. Say Goodbye acompaña ese momento con una cámara que no juzga ni explica, sino que simplemente se queda. Paloma López Carrillo filma lo que generalmente no se filma: el tiempo antes del adiós, los gestos que no saben que son últimos, las palabras que se quedan cortas. Una película sobre la migración vista desde adentro, desde la despedida que no termina.</p>
@@ -286,6 +286,20 @@ nav {
   var lang=localStorage.getItem('eic-lang')||'es';
   function setLang(l){
     lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script><script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
     document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
     document.documentElement.lang=l;

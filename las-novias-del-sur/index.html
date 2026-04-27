@@ -229,7 +229,7 @@ nav {
 <li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
 </ul>
-<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .15rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
 </div>
 </nav>
 <div class="stills-wrap">
@@ -239,7 +239,7 @@ nav {
 </div>
 <div class="film-main">
 <div class="film-left">
-<div class="film-title">Las novias del sur</div>
+<div class="film-title" data-en="Southern Brides" data-es="Las novias del sur">Las novias del sur</div>
 <div class="film-meta">Elena López Riera · 2024 · España, Suiza, Francia · Documental · 75 min</div>
 <div class="film-awards">Queer Palm · Cannes 2024  ·  César Mejor Documental 2025  ·  FICUNAM 2025</div>
 <p class="film-synopsis" data-en="Elderly women speak about their marriages, their first sexual experiences, and their intimate relationship with sexuality. Through the repetition of these ancestral rituals, the director reflects on her own absence of marriage and children, and with it, a mother-daughter lineage that is fading away." data-es="En un pueblo del sureste español, mujeres de distintas generaciones se reúnen cada año para bailar al son de una música que mezcla tradiciones árabes y europeas. Las novias del sur es un filme sobre la memoria colectiva que vive en los cuerpos, sobre lo que las mujeres heredan y lo que eligen conservar. Una película que filma el baile como si fuera un idioma a punto de desaparecer.">En un pueblo del sureste español, mujeres de distintas generaciones se reúnen cada año para bailar al son de una música que mezcla tradiciones árabes y europeas. Las novias del sur es un filme sobre la memoria colectiva que vive en los cuerpos, sobre lo que las mujeres heredan y lo que eligen conservar. Una película que filma el baile como si fuera un idioma a punto de desaparecer.</p>
@@ -316,7 +316,7 @@ nav {
 &lt;span class="press-title"&gt;Interview with Elena López Riera&lt;/span&gt;
 &lt;span class="press-source"&gt;Lumbre Cinema · Oralia Torres →&lt;/span&gt;
 ' data-es='
-&lt;span class="press-title"&gt;Entrevista con Elena López Riera&lt;/span&gt;
+&lt;span class="press-title" data-en="Interview with Elena López Riera" data-es="Entrevista con Elena López Riera"&gt;Entrevista con Elena López Riera&lt;/span&gt;
 &lt;span class="press-source"&gt;Lumbre Cinema · Oralia Torres →&lt;/span&gt;
 ' href="https://lumbrecinema.mx/2025/09/05/entrevista-elena-lopez-riera-las-novias-del-sur/" target="_blank">
 <span class="press-title" data-en="Interview with Elena López Riera" data-es="Entrevista con Elena López Riera">Entrevista con Elena López Riera</span>
@@ -326,7 +326,7 @@ nav {
 &lt;span class="press-title"&gt;Review: Southern Brides&lt;/span&gt;
 &lt;span class="press-source"&gt;El antepenúltimo mohicano · Javier Acevedo Nieto →&lt;/span&gt;
 ' data-es='
-&lt;span class="press-title"&gt;Crítica: Las novias del sur&lt;/span&gt;
+&lt;span class="press-title" data-en="Review: Southern Brides" data-es="Crítica: Las novias del sur"&gt;Crítica: Las novias del sur&lt;/span&gt;
 &lt;span class="press-source"&gt;El antepenúltimo mohicano · Javier Acevedo Nieto →&lt;/span&gt;
 ' href="https://www.elantepenultimomohicano.com/2024/11/critica-las-novias-del-sur.html" target="_blank">
 <span class="press-title" data-en="Review: Southern Brides" data-es="Crítica: Las novias del sur">Crítica: Las novias del sur</span>
@@ -401,6 +401,20 @@ nav {
   var lang=localStorage.getItem('eic-lang')||'es';
   function setLang(l){
     lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script><script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
     document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
     document.documentElement.lang=l;

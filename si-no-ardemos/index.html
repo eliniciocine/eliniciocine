@@ -214,7 +214,7 @@ nav {
 <li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
 </ul>
-<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .15rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
 </div>
 </nav>
 <div class="stills-wrap">
@@ -225,7 +225,7 @@ nav {
 <div class="film-main">
 <div class="film-left">
 <div class="proximamente-tag">Próximamente</div>
-<div class="film-title">Si no ardemos, cómo iluminar la noche</div>
+<div class="film-title" data-en="If We Don't Burn, How Do We Light Up the Night" data-es="Si no ardemos, cómo iluminar la noche">Si no ardemos, cómo iluminar la noche</div>
 <div class="film-meta">Kim Torres · 2025 · México, Costa Rica, Francia · Ficción</div>
 <div class="film-awards">New Directors · San Sebastián 2025  ·  FICM 2025</div>
 <p class="film-synopsis" data-en="At thirteen, Laura feels trapped in her new family. Just as she begins to accept her new life among vast forests and palm plantations, she discovers that the town hides a dark secret that threatens the women she loves most." data-es="En los márgenes de una ciudad centroamericana, un grupo de jóvenes mujeres construye sus propios rituales de resistencia frente a la violencia y la invisibilidad. Si no ardemos es una película sobre el fuego como metáfora y como acto: qué significa encenderse cuando el mundo no te da espacio para hacerlo. Un debut que llegó al mundo desde los festivales más importantes del cine de autor.">En los márgenes de una ciudad centroamericana, un grupo de jóvenes mujeres construye sus propios rituales de resistencia frente a la violencia y la invisibilidad. Si no ardemos es una película sobre el fuego como metáfora y como acto: qué significa encenderse cuando el mundo no te da espacio para hacerlo. Un debut que llegó al mundo desde los festivales más importantes del cine de autor.</p>
@@ -279,6 +279,20 @@ nav {
   var lang=localStorage.getItem('eic-lang')||'es';
   function setLang(l){
     lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script><script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
     document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
     document.documentElement.lang=l;
