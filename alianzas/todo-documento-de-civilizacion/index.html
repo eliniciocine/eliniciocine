@@ -182,22 +182,6 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
 (function(){
   var lang=localStorage.getItem('eic-lang')||'es';
   function setLang(l){
-    lang=l; localStorage.setItem('eic-lang',l);
-    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
-      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
-      else{el.innerHTML=el.getAttribute('data-'+l);}});
-    document.documentElement.lang=l;
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
-    setLang(lang);
-  });
-})();
-</script><script>
-(function(){
-  var lang=localStorage.getItem('eic-lang')||'es';
-  function setLang(l){
     lang=l;localStorage.setItem('eic-lang',l);
     document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
     document.querySelectorAll('[data-es][data-en]').forEach(function(el){
