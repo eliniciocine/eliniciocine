@@ -1,16 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Alianzas — el inicio cine</title>
-<meta name="description" content="Eventos de el inicio cine: funciones especiales, conversatorios y talleres alrededor de nuestras películas en México.">
-<meta name="robots" content="index, follow">
-<meta property="og:site_name" content="el inicio cine">
-<meta property="og:title" content="Alianzas — el inicio cine">
-<meta property="og:description" content="Funciones especiales, conversatorios y talleres alrededor del cine que distribuimos.">
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta content="Eventos de el inicio cine: funciones especiales, conversatorios y talleres alrededor de nuestras películas en México." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="el inicio cine" property="og:site_name"/>
+<meta content="Alianzas — el inicio cine" property="og:title"/>
+<meta content="Funciones especiales, conversatorios y talleres alrededor del cine que distribuimos." property="og:description"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #999; }
@@ -144,96 +144,100 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .lang-sep { color: var(--muted); }
 .lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
 .lang-link:hover { color: var(--dark); }
-</style>
+
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
+.lang-btn.active{color:var(--dark);}
+.lang-btn:not(.active){color:var(--muted);}
+.lang-btn:hover{color:var(--dark);}</style>
 </head>
 <body>
-
 <nav>
-    <a href="/" class="logo"><img src="/img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
-    <div class="nav-right">
-        <ul class="nav-links">
-            <li><a href="/#cartelera">Cartelera</a></li>
-            <li><a href="/alianzas/" class="active">Alianzas</a></li>
-            <li><a href="/#quienes">Quiénes somos</a></li>
-            <li><a href="/#servicios">Servicios</a></li>
-            <li><a href="/#contacto">Contacto</a></li>
-        </ul>
-        <div class="lang-toggle">
-            <span class="lang-current">ES</span>
-            <span class="lang-sep">·</span>
-            <a href="/mockup_elinicio_eventos_en.html" class="lang-link">EN</a>
-        </div>
-    </div>
+<a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
+<div class="nav-right">
+<ul class="nav-links">
+<li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
+<li><a class="active" data-en="Events" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="About us" data-es="Quiénes somos" href="/#quienes">Quiénes somos</a></li>
+<li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
+<li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
+</ul>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+</div>
 </nav>
-
 <div class="page-header">
-    <div class="page-title">Alianzas</div>
-    <div class="page-sub">Funciones especiales, conversatorios y talleres alrededor de nuestras películas.</div>
+<div class="page-title">Alianzas</div>
+<div class="page-sub">Funciones especiales, conversatorios y talleres alrededor de nuestras películas.</div>
 </div>
-
 <div class="events-list">
-
-    <a href="/alianzas/la-hora-de-la-estrella/" class="event-row">
-        <div class="row-date">Feb<br>2026</div>
-        <div class="row-img"><img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG" alt=""></div>
-        <div class="row-body">
-            <div class="row-film-tag">La hora de la estrella</div>
-            <h2 class="row-title">Función especial + charla</h2>
-            <div class="row-venue">Cine Lido, Centro Cultural Bella Época · CDMX</div>
-            <p class="row-excerpt">Proyección especial seguida de charla entre María Novaro, Brenda Lozano y Lilia Lustosa sobre las conexiones entre Suzana Amaral y Clarice Lispector.</p>
-        </div>
-        <span class="row-cta">Ver →</span>
-    </a>
-
-    <a href="/alianzas/todo-documento-de-civilizacion/" class="event-row">
-        <div class="row-date">Nov<br>2025</div>
-        <div class="row-img"><img src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/3F8DBC98-3036-43BA-848D-B76ECB329800 2.JPG" alt=""></div>
-        <div class="row-body">
-            <div class="row-film-tag">Todo documento de civilización</div>
-            <h2 class="row-title">Función especial + conversatorio</h2>
-            <div class="row-venue">Centro de Cultura Digital · CDMX</div>
-            <p class="row-excerpt">Conversación entre Tatiana Mazú, Daniela Rea y Alicia de los Ríos sobre el cine y la desaparición forzada en América Latina.</p>
-        </div>
-        <span class="row-cta">Ver →</span>
-    </a>
-
-    <a href="/alianzas/las-novias-taller/" class="event-row">
-        <div class="row-date">Sep<br>2025</div>
-        <div class="row-img"><img src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Taller/00168F5F-BCD5-47C6-95F7-A11D96D7F734.JPG" alt=""></div>
-        <div class="row-body">
-            <div class="row-film-tag">Las novias del sur</div>
-            <h2 class="row-title">Taller: Contar en primera persona</h2>
-            <div class="row-venue">Centro Cultural de España · CDMX</div>
-            <p class="row-excerpt">Elena López Riera guió a 10 directoras y directores mexicanos emergentes en el desarrollo de sus proyectos documentales.</p>
-        </div>
-        <span class="row-cta">Ver →</span>
-    </a>
-
-    <a href="/alianzas/las-novias-retrospectiva/" class="event-row">
-        <div class="row-date">Sep<br>2025</div>
-        <div class="row-img"><img src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg" alt=""></div>
-        <div class="row-body">
-            <div class="row-film-tag">Las novias del sur</div>
-            <h2 class="row-title">Retrospectiva + charla</h2>
-            <div class="row-venue">Centro Cultural de España · CDMX</div>
-            <p class="row-excerpt">Retrospectiva documental de Elena — Pueblo, Las vísceras, Los que desean — con charla junto a la escritora Natalia Durand.</p>
-        </div>
-        <span class="row-cta">Ver →</span>
-    </a>
-
-    <a href="/alianzas/las-novias-premier/" class="event-row">
-        <div class="row-date">Sep<br>2025</div>
-        <div class="row-img"><img src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg" alt=""></div>
-        <div class="row-body">
-            <div class="row-film-tag">Las novias del sur</div>
-            <h2 class="row-title">Premier nacional + Q&amp;A</h2>
-            <div class="row-venue">Cineteca Nacional · CDMX</div>
-            <p class="row-excerpt">Premier nacional con Q&A entre Elena López Riera y el público, moderado por la crítica de cine Oralia Torres.</p>
-        </div>
-        <span class="row-cta">Ver →</span>
-    </a>
-
+<a class="event-row" href="/alianzas/la-hora-de-la-estrella/">
+<div class="row-date">Feb<br/>2026</div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG"/></div>
+<div class="row-body">
+<div class="row-film-tag">La hora de la estrella</div>
+<h2 class="row-title" data-en="Special screening + talk" data-es="Función especial + charla">Función especial + charla</h2>
+<div class="row-venue">Cine Lido, Centro Cultural Bella Época · CDMX</div>
+<p class="row-excerpt" data-en="A special screening followed by a conversation between María Novaro, Brenda Lozano, and Lilia Lustosa about the connections between the work of Suzana Amaral and Clarice Lispector." data-es="Proyección especial seguida de charla entre María Novaro, Brenda Lozano y Lilia Lustosa sobre las conexiones entre Suzana Amaral y Clarice Lispector.">Proyección especial seguida de charla entre María Novaro, Brenda Lozano y Lilia Lustosa sobre las conexiones entre Suzana Amaral y Clarice Lispector.</p>
 </div>
-
-</body>
+<span class="row-cta" data-en="See →" data-es="Ver →">Ver →</span>
+</a>
+<a class="event-row" href="/alianzas/todo-documento-de-civilizacion/">
+<div class="row-date">Nov<br/>2025</div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/3F8DBC98-3036-43BA-848D-B76ECB329800 2.JPG"/></div>
+<div class="row-body">
+<div class="row-film-tag">Todo documento de civilización</div>
+<h2 class="row-title" data-en="Special screening + conversation" data-es="Función especial + conversatorio">Función especial + conversatorio</h2>
+<div class="row-venue">Centro de Cultura Digital · CDMX</div>
+<p class="row-excerpt" data-en="A conversation between Tatiana Mazú, Daniela Rea, and Alicia de los Ríos about cinema and enforced disappearance in Latin America." data-es="Conversación entre Tatiana Mazú, Daniela Rea y Alicia de los Ríos sobre el cine y la desaparición forzada en América Latina.">Conversación entre Tatiana Mazú, Daniela Rea y Alicia de los Ríos sobre el cine y la desaparición forzada en América Latina.</p>
+</div>
+<span class="row-cta" data-en="See →" data-es="Ver →">Ver →</span>
+</a>
+<a class="event-row" href="/alianzas/las-novias-taller/">
+<div class="row-date">Sep<br/>2025</div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Taller/00168F5F-BCD5-47C6-95F7-A11D96D7F734.JPG"/></div>
+<div class="row-body">
+<div class="row-film-tag">Las novias del sur</div>
+<h2 class="row-title" data-en="Workshop: First-Person Storytelling" data-es="Taller: Contar en primera persona">Taller: Contar en primera persona</h2>
+<div class="row-venue">Centro Cultural de España · CDMX</div>
+<p class="row-excerpt" data-en="Elena López Riera led ten emerging Mexican filmmakers in the development of their documentary projects." data-es="Elena López Riera guió a 10 directoras y directores mexicanos emergentes en el desarrollo de sus proyectos documentales.">Elena López Riera guió a 10 directoras y directores mexicanos emergentes en el desarrollo de sus proyectos documentales.</p>
+</div>
+<span class="row-cta" data-en="See →" data-es="Ver →">Ver →</span>
+</a>
+<a class="event-row" href="/alianzas/las-novias-retrospectiva/">
+<div class="row-date">Sep<br/>2025</div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg"/></div>
+<div class="row-body">
+<div class="row-film-tag">Las novias del sur</div>
+<h2 class="row-title" data-en="Retrospective + talk" data-es="Retrospectiva + charla">Retrospectiva + charla</h2>
+<div class="row-venue">Centro Cultural de España · CDMX</div>
+<p class="row-excerpt" data-en="A retrospective of Elena's documentary work — Pueblo, Las vísceras, Those Who Desire — and a talk with writer Natalia Durand." data-es="Retrospectiva documental de Elena — Pueblo, Las vísceras, Los que desean — con charla junto a la escritora Natalia Durand.">Retrospectiva documental de Elena — Pueblo, Las vísceras, Los que desean — con charla junto a la escritora Natalia Durand.</p>
+</div>
+<span class="row-cta" data-en="See →" data-es="Ver →">Ver →</span>
+</a>
+<a class="event-row" href="/alianzas/las-novias-premier/">
+<div class="row-date">Sep<br/>2025</div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg"/></div>
+<div class="row-body">
+<div class="row-film-tag">Las novias del sur</div>
+<h2 class="row-title" data-en="National premiere + Q&amp;amp;A" data-es="Premier nacional + Q&amp;amp;A">Premier nacional + Q&amp;A</h2>
+<div class="row-venue">Cineteca Nacional · CDMX</div>
+<p class="row-excerpt" data-en="National premiere with a Q&amp;amp;A between Elena López Riera and the audience, moderated by film critic Oralia Torres." data-es="Premier nacional con Q&amp;amp;A entre Elena López Riera y el público, moderado por la crítica de cine Oralia Torres.">Premier nacional con Q&amp;A entre Elena López Riera y el público, moderado por la crítica de cine Oralia Torres.</p>
+</div>
+<span class="row-cta" data-en="See →" data-es="Ver →">Ver →</span>
+</a>
+</div>
+<script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script></body>
 </html>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>La hora de la estrella — el inicio cine</title>
-<meta name="description" content="La hora de la estrella, de Suzana Amaral. Basada en Clarice Lispector. Oso de Plata Berlín 1986. Distribuida en México por el inicio cine.">
-<meta name="robots" content="index, follow">
-<meta property="og:site_name" content="el inicio cine">
-<meta property="og:title" content="La hora de la estrella — el inicio cine">
-<meta property="og:description" content="La hora de la estrella · Suzana Amaral · Oso de Plata Berlín 1986. Basada en Clarice Lispector.">
+<meta content="La hora de la estrella, de Suzana Amaral. Basada en Clarice Lispector. Oso de Plata Berlín 1986. Distribuida en México por el inicio cine." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="el inicio cine" property="og:site_name"/>
+<meta content="La hora de la estrella — el inicio cine" property="og:title"/>
+<meta content="La hora de la estrella · Suzana Amaral · Oso de Plata Berlín 1986. Basada en Clarice Lispector." property="og:description"/>
 <script type="application/ld+json">{"":"https://schema.org","":"Movie","name":"La hora de la estrella","director":{"":"Person","name":"Suzana Amaral"},"datePublished":"1985","description":"Macabéa, huérfana de 19 años, sale al mundo desde el Nordeste de Brasil hacia São Paulo."}</script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #999; }
@@ -207,151 +208,160 @@ nav {
 .guest-name { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--dark); max-width: 90px; line-height: 1.3; }
 .event-logos { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
 .event-logos img { height: 72px; width: auto; object-fit: contain; }
-</style>
+
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
+.lang-btn.active{color:var(--dark);}
+.lang-btn:not(.active){color:var(--muted);}
+.lang-btn:hover{color:var(--dark);}</style>
 </head>
 <body>
-
 <nav>
-    <a href="/" class="logo"><img src="/img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
-    <div class="nav-right">
-        <ul class="nav-links">
-            <li><a href="/#cartelera">Cartelera</a></li>
-            <li><a href="/alianzas/">Alianzas</a></li>
-            <li><a href="/#quienes">Quiénes somos</a></li>
-            <li><a href="/#servicios">Servicios</a></li>
-            <li><a href="/#contacto">Contacto</a></li>
-        </ul>
-        <div class="lang-toggle">
-            <span class="lang-current">ES</span>
-            <span class="lang-sep">·</span>
-            <a href="/mockup_elinicio_lhdle_en.html" class="lang-link">EN</a>
-        </div>
-    </div>
+<a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
+<div class="nav-right">
+<ul class="nav-links">
+<li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
+<li><a data-en="Events" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="About us" data-es="Quiénes somos" href="/#quienes">Quiénes somos</a></li>
+<li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
+<li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
+</ul>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+</div>
 </nav>
-
 <div class="stills-wrap">
-    <div class="still-item"><img src="/img/stills/LHDLE 2.png" alt=""></div>
-    <div class="still-item"><img src="/img/stills/LHDLE 3.png" alt=""></div>
-    <div class="still-item"><img src="/img/stills/LHDLE- 2.png" alt=""></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE 2.png"/></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE 3.png"/></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE- 2.png"/></div>
 </div>
-
 <div class="film-main">
-
-    <div class="film-left">
-        <div class="film-title">La hora de la estrella</div>
-        <div class="film-meta">Suzana Amaral · 1985 · Brasil · Ficción · 96 min</div>
-        <div class="film-awards">Oso de Plata Mejor Actriz · Berlín 1986 &nbsp;·&nbsp; Mejor Película · Asociación Paulista de Críticos de Arte</div>
-
-        <p class="film-synopsis">Macabéa es una joven mecanógrafa del nordeste brasileño que vive en la periferia de São Paulo. Ignorante del mundo, hambrienta, enamorada de alguien que no la merece, Macabéa sobrevive con una alegría involuntaria y perturbadora. Basada en la novela homónima de Clarice Lispector, La hora de la estrella es una película sobre los que el mundo olvida y sobre cómo el cine puede devolverles el centro.</p>
-
-        <div class="section-tag">Festivales y exhibiciones</div>
-
-        <div class="festival-item">
-            <div>
-                <div class="fest-name">Festival Internacional de Cine de Berlín</div>
-                <span class="fest-section">Oso de Plata · Mejor Actriz</span>
-            </div>
-            <div class="fest-place">Alemania · 1986</div>
-        </div>
-        <div class="festival-item">
-            <div>
-                <div class="fest-name">Asociación Paulista de Críticos de Arte</div>
-                <span class="fest-section">Mejor Película</span>
-            </div>
-            <div class="fest-place">Brasil · 1986</div>
-        </div>
-        <div class="festival-item">
-            <div>
-                <div class="fest-name">FICUNAM</div>
-                <span class="fest-section">Retrospectiva</span>
-            </div>
-            <div class="fest-place">CDMX, México · 2025</div>
-        </div>
-    </div>
-
-    <div class="film-right">
-
-        <a href="https://www.youtube.com/watch?v=4vZsk7PSOeI" target="_blank" class="trailer-thumb">
-            <img src="https://img.youtube.com/vi/4vZsk7PSOeI/maxresdefault.jpg" alt="Tráiler — La hora de la estrella">
-            <div class="play-btn">
-                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,0.88)"/>
-                    <polygon points="18,14 34,22 18,30" fill="#1a1a1a"/>
-                </svg>
-            </div>
-        </a>
-
-        <a href="/PK_LHDLE.pdf" class="presskit-btn" download target="_blank" rel="noopener">
-            <div>
-                <div class="presskit-label">Press Kit</div>
-                <div class="presskit-sub">PDF · Fotos · Ficha técnica</div>
-            </div>
-            <span class="download-arrow">↓</span>
-        </a>
-
-        <a href="https://boxd.it/XUQ" class="letterboxd-btn" target="_blank" rel="noopener">
-            <div class="letterboxd-left">
-                <svg class="letterboxd-logo" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#00E054"/><circle cx="28.5" cy="12" r="12" fill="#40BCF4"/><circle cx="45" cy="12" r="12" fill="#FF8000"/></svg>
-                <div>
-                    <div class="letterboxd-label">Ver en Letterboxd</div>
-                    <div class="letterboxd-sub">Reseñas y valoraciones</div>
-                </div>
-            </div>
-            <span class="letterboxd-arrow">↗</span>
-        </a>
-
-    </div>
+<div class="film-left">
+<div class="film-title">La hora de la estrella</div>
+<div class="film-meta">Suzana Amaral · 1985 · Brasil · Ficción · 96 min</div>
+<div class="film-awards">Oso de Plata Mejor Actriz · Berlín 1986  ·  Mejor Película · Asociación Paulista de Críticos de Arte</div>
+<p class="film-synopsis" data-en="Macabéa is a young orphan who sets out into the world at the age of 19. Illiterate, naive, and a virgin, she leaves Brazil's Northeast to try her luck in São Paulo. Based on the novel of the same name by Clarice Lispector, The Hour of the Star follows Macabéa through her first job experiences, her first love, and the predictions of a fortune teller — a collision of worlds that will seal her fate." data-es="Macabéa es una joven mecanógrafa del nordeste brasileño que vive en la periferia de São Paulo. Ignorante del mundo, hambrienta, enamorada de alguien que no la merece, Macabéa sobrevive con una alegría involuntaria y perturbadora. Basada en la novela homónima de Clarice Lispector, La hora de la estrella es una película sobre los que el mundo olvida y sobre cómo el cine puede devolverles el centro.">Macabéa es una joven mecanógrafa del nordeste brasileño que vive en la periferia de São Paulo. Ignorante del mundo, hambrienta, enamorada de alguien que no la merece, Macabéa sobrevive con una alegría involuntaria y perturbadora. Basada en la novela homónima de Clarice Lispector, La hora de la estrella es una película sobre los que el mundo olvida y sobre cómo el cine puede devolverles el centro.</p>
+<div class="section-tag">Festivales y exhibiciones</div>
+<div class="festival-item">
+<div>
+<div class="fest-name">Festival Internacional de Cine de Berlín</div>
+<span class="fest-section" data-en="Silver Bear · Best Actress" data-es="Oso de Plata · Mejor Actriz">Oso de Plata · Mejor Actriz</span>
 </div>
-
+<div class="fest-place">Alemania · 1986</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name">Asociación Paulista de Críticos de Arte</div>
+<span class="fest-section" data-en="Best Film" data-es="Mejor Película">Mejor Película</span>
+</div>
+<div class="fest-place">Brasil · 1986</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name">FICUNAM</div>
+<span class="fest-section" data-en="Retrospective" data-es="Retrospectiva">Retrospectiva</span>
+</div>
+<div class="fest-place">CDMX, México · 2025</div>
+</div>
+</div>
+<div class="film-right">
+<a class="trailer-thumb" href="https://www.youtube.com/watch?v=4vZsk7PSOeI" target="_blank">
+<img alt="Tráiler — La hora de la estrella" src="https://img.youtube.com/vi/4vZsk7PSOeI/maxresdefault.jpg"/>
+<div class="play-btn">
+<svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" fill="rgba(255,255,255,0.88)" r="22"></circle>
+<polygon fill="#1a1a1a" points="18,14 34,22 18,30"></polygon>
+</svg>
+</div>
+</a>
+<a class="presskit-btn" download="" href="/PK_LHDLE.pdf" rel="noopener" target="_blank">
+<div>
+<div class="presskit-label">Press Kit</div>
+<div class="presskit-sub">PDF · Fotos · Ficha técnica</div>
+</div>
+<span class="download-arrow">↓</span>
+</a>
+<a class="letterboxd-btn" href="https://boxd.it/XUQ" rel="noopener" target="_blank">
+<div class="letterboxd-left">
+<svg class="letterboxd-logo" fill="none" viewbox="0 0 57 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" fill="#00E054" r="12"></circle><circle cx="28.5" cy="12" fill="#40BCF4" r="12"></circle><circle cx="45" cy="12" fill="#FF8000" r="12"></circle></svg>
+<div>
+<div class="letterboxd-label">Ver en Letterboxd</div>
+<div class="letterboxd-sub">Reseñas y valoraciones</div>
+</div>
+</div>
+<span class="letterboxd-arrow">↗</span>
+</a>
+</div>
+</div>
 <!-- CRÍTICAS Y PRENSA -->
 <div class="press-section">
-    <div class="section-tag">Críticas y prensa</div>
-    <a href="https://elpais.com/actualidad/newsletter-americanas/2026-02-09/la-hora-de-la-estrella-el-legado-de-clarice-lispector-a-traves-de-su-protagonista.html" target="_blank" class="press-link">
-        <span class="press-title">La hora de la estrella: el legado de Clarice Lispector a través de su protagonista — Entrevista con Marcélia Cartaxo</span>
-        <span class="press-source">El País →</span>
-    </a>
-    <a href="https://drive.google.com/file/d/1v2JZXgRffv7JKdYKcZZ4NwYubXBAdP9y/view?usp=sharing" target="_blank" class="press-link">
-        <span class="press-title">Crítica de La hora de la estrella — Programa mensual Cineteca Nacional México</span>
-        <span class="press-source">Cineteca Nacional →</span>
-    </a>
+<div class="section-tag">Críticas y prensa</div>
+<a class="press-link" data-en="
+&lt;span class=&quot;press-title&quot;&gt;The Hour of the Star: Clarice Lispector's legacy through her protagonist — Interview with Marcélia Cartaxo&lt;/span&gt;
+&lt;span class=&quot;press-source&quot;&gt;El País →&lt;/span&gt;
+" data-es='
+&lt;span class="press-title"&gt;La hora de la estrella: el legado de Clarice Lispector a través de su protagonista — Entrevista con Marcélia Cartaxo&lt;/span&gt;
+&lt;span class="press-source"&gt;El País →&lt;/span&gt;
+' href="https://elpais.com/actualidad/newsletter-americanas/2026-02-09/la-hora-de-la-estrella-el-legado-de-clarice-lispector-a-traves-de-su-protagonista.html" target="_blank">
+<span class="press-title" data-en="The Hour of the Star: Clarice Lispector's legacy through her protagonist — Interview with Marcélia Cartaxo" data-es="La hora de la estrella: el legado de Clarice Lispector a través de su protagonista — Entrevista con Marcélia Cartaxo">La hora de la estrella: el legado de Clarice Lispector a través de su protagonista — Entrevista con Marcélia Cartaxo</span>
+<span class="press-source">El País →</span>
+</a>
+<a class="press-link" data-en='
+&lt;span class="press-title"&gt;Review: The Hour of the Star — Monthly programme, Cineteca Nacional México&lt;/span&gt;
+&lt;span class="press-source"&gt;Cineteca Nacional →&lt;/span&gt;
+' data-es='
+&lt;span class="press-title"&gt;Crítica de La hora de la estrella — Programa mensual Cineteca Nacional México&lt;/span&gt;
+&lt;span class="press-source"&gt;Cineteca Nacional →&lt;/span&gt;
+' href="https://drive.google.com/file/d/1v2JZXgRffv7JKdYKcZZ4NwYubXBAdP9y/view?usp=sharing" target="_blank">
+<span class="press-title" data-en="Review: The Hour of the Star — Monthly programme, Cineteca Nacional México" data-es="Crítica de La hora de la estrella — Programa mensual Cineteca Nacional México">Crítica de La hora de la estrella — Programa mensual Cineteca Nacional México</span>
+<span class="press-source">Cineteca Nacional →</span>
+</a>
 </div>
-
 <!-- EVENTOS -->
 <div class="events-section">
-    <div class="events-inner">
-        <div class="section-tag">Alianzas</div>
-
-        <div class="event-card">
-            <div>
-                <div class="event-date">Febrero 2026</div>
-                <div class="event-venue">Función especial<br>Cine Lido, Centro Cultural Bella Época · CDMX</div>
-            </div>
-            <div>
-                <p class="event-desc">En alianza con el Instituto Guimarães Rosa México y el Fondo de Cultura Económica, se realizó una proyección especial de La hora de la estrella. Posterior a la función, la directora mexicana María Novaro, la escritora Brenda Lozano y la investigadora de cine brasileño Lilia Lustosa conversaron sobre las conexiones entre la literatura y el cine, y las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.</p>
-                <div class="event-guests">
-                    <div class="guest-item">
-                        <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg" alt="María Novaro">
-                        <span class="guest-name">María Novaro</span>
-                    </div>
-                    <div class="guest-item">
-                        <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg" alt="Brenda Lozano">
-                        <span class="guest-name">Brenda Lozano</span>
-                    </div>
-                    <div class="guest-item">
-                        <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg" alt="Lilia Lustosa">
-                        <span class="guest-name">Lilia Lustosa</span>
-                    </div>
-                </div>
-                <div class="event-logos">
-                    <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png" alt="Instituto Guimarães Rosa">
-                    <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png" alt="Fondo de Cultura Económica">
-                    <img src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png" alt="Embajada de Brasil">
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="events-inner">
+<div class="section-tag">Alianzas</div>
+<div class="event-card">
+<div>
+<div class="event-date">Febrero 2026</div>
+<div class="event-venue">Función especial<br/>Cine Lido, Centro Cultural Bella Época · CDMX</div>
 </div>
-
-</body>
+<div>
+<p class="event-desc" data-en="In partnership with the Guimarães Rosa Institute Mexico of the Government of Brazil and Fondo de Cultura Económica, a special screening of The Hour of the Star, directed by Suzana Amaral, was held at Cine Lido, Centro Cultural Bella Época, in Mexico City. Following the screening, Mexican director María Novaro, alongside writer Brenda Lozano and Brazilian cinema researcher Lilia Lustosa, engaged in a conversation about the connections between literature and film, focusing in particular on the intersections between the work of Suzana Amaral and Clarice Lispector." data-es="En alianza con el Instituto Guimarães Rosa México y el Fondo de Cultura Económica, se realizó una proyección especial de La hora de la estrella. Posterior a la función, la directora mexicana María Novaro, la escritora Brenda Lozano y la investigadora de cine brasileño Lilia Lustosa conversaron sobre las conexiones entre la literatura y el cine, y las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.">En alianza con el Instituto Guimarães Rosa México y el Fondo de Cultura Económica, se realizó una proyección especial de La hora de la estrella. Posterior a la función, la directora mexicana María Novaro, la escritora Brenda Lozano y la investigadora de cine brasileño Lilia Lustosa conversaron sobre las conexiones entre la literatura y el cine, y las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.</p>
+<div class="event-guests">
+<div class="guest-item">
+<img alt="María Novaro" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg"/>
+<span class="guest-name">María Novaro</span>
+</div>
+<div class="guest-item">
+<img alt="Brenda Lozano" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg"/>
+<span class="guest-name">Brenda Lozano</span>
+</div>
+<div class="guest-item">
+<img alt="Lilia Lustosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg"/>
+<span class="guest-name">Lilia Lustosa</span>
+</div>
+</div>
+<div class="event-logos">
+<img alt="Instituto Guimarães Rosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png"/>
+<img alt="Fondo de Cultura Económica" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png"/>
+<img alt="Embajada de Brasil" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script></body>
 </html>

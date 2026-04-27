@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>el inicio cine — Distribución de cine independiente en México</title>
-<meta name="description" content="Somos el inicio cine, distribuidora mexicana de cine independiente. Acompañamos películas de autor hacia su público a través de circuitos de exhibición, alianzas y estrategia.">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="el inicio cine">
-<meta property="og:title" content="el inicio cine — Distribución de cine independiente en México">
-<meta property="og:description" content="Distribuidora mexicana de cine independiente. Circuitos de exhibición, alianzas y estrategia para películas de autor.">
+<meta content="Somos el inicio cine, distribuidora mexicana de cine independiente. Acompañamos películas de autor hacia su público a través de circuitos de exhibición, alianzas y estrategia." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="el inicio cine" property="og:site_name"/>
+<meta content="el inicio cine — Distribución de cine independiente en México" property="og:title"/>
+<meta content="Distribuidora mexicana de cine independiente. Circuitos de exhibición, alianzas y estrategia para películas de autor." property="og:description"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,7 +25,7 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -643,267 +644,238 @@ footer a { color: var(--red); text-decoration: none; }
 .lang-sep { color: var(--muted); }
 .lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
 .lang-link:hover { color: var(--dark); }
-</style>
+
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
+.lang-btn.active{color:var(--dark);}
+.lang-btn:not(.active){color:var(--muted);}
+.lang-btn:hover{color:var(--dark);}</style>
 </head>
 <body>
-
 <nav>
-    <a href="/" class="logo"><img src="/img/logos pngs/EIC_Wordmark_Negro.png" alt="el inicio cine"></a>
-    <div class="nav-right">
-        <ul class="nav-links">
-            <li><a href="#cartelera">Cartelera</a></li>
-            <li><a href="/alianzas/">Alianzas</a></li>
-            <li><a href="#quienes">Quiénes somos</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="lang-toggle">
-            <span class="lang-current">ES</span>
-            <span class="lang-sep">·</span>
-            <a href="/mockup_eliniciocine_en.html" class="lang-link">EN</a>
-        </div>
-    </div>
+<a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
+<div class="nav-right">
+<ul class="nav-links">
+<li><a data-en="Screenings" data-es="Cartelera" href="#cartelera">Cartelera</a></li>
+<li><a data-en="Events" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="About Us" data-es="Quiénes somos" href="#quienes">Quiénes somos</a></li>
+<li><a data-en="Services" data-es="Servicios" href="#servicios">Servicios</a></li>
+<li><a data-en="Contact" data-es="Contacto" href="#contacto">Contacto</a></li>
+</ul>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .1rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+</div>
 </nav>
-
 <!-- HERO -->
 <div class="hero">
-    <h1>Para nosotras,<br>distribuir es<br>el inicio.</h1>
-    <p class="hero-sub">Circuitos de exhibición.<br>Públicos. Alianzas.<br>Estrategia.</p>
+<h1 data-en="For us,&lt;br/&gt;distribution is&lt;br/&gt;the beginning." data-es="Para nosotras,&lt;br/&gt;distribuir es&lt;br/&gt;el inicio.">Para nosotras,<br/>distribuir es<br/>el inicio.</h1>
+<p class="hero-sub" data-en="Exhibition circuits.&lt;br/&gt;Audiences. Partnerships.&lt;br/&gt;Strategy." data-es="Circuitos de exhibición.&lt;br/&gt;Públicos. Alianzas.&lt;br/&gt;Estrategia.">Circuitos de exhibición.<br/>Públicos. Alianzas.<br/>Estrategia.</p>
 </div>
-
 <!-- CATÁLOGO -->
 <div class="section-label" id="catalogo" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Nuestro catálogo</div>
-
 <div class="film-grid">
-
-    <a href="/la-hora-de-la-estrella/" class="film-card">
-        <div class="film-poster">
-            <img src="/img/HoraDaEstrela_Alternativo_64x94.png" alt="La hora de la estrella">
-        </div>
-        <div class="film-info">
-            <div class="film-title">La hora de la estrella</div>
-            <div class="film-meta">Suzana Amaral<br>Brasil · 1985</div>
-        </div>
-    </a>
-
-    <a href="/las-novias-del-sur/" class="film-card">
-        <div class="film-poster">
-            <img src="/img/LNDS_ AFICHE_ EIC.png" alt="Las novias del sur">
-        </div>
-        <div class="film-info">
-            <div class="film-title">Las novias del sur</div>
-            <div class="film-meta">Elena López Riera<br>España · 2024</div>
-        </div>
-    </a>
-
-    <a href="/todo-documento-de-civilizacion/" class="film-card">
-        <div class="film-poster">
-            <img src="/img/TDDC_ AFICHE_ EIC.png" alt="Todo documento de civilización">
-        </div>
-        <div class="film-info">
-            <div class="film-title">Todo documento de civilización</div>
-            <div class="film-meta">Tatiana Mazú González<br>Argentina · 2024</div>
-        </div>
-    </a>
-
-    <a href="/si-no-ardemos/" class="film-card proximamente">
-        <div class="film-poster">
-            <img src="/img/SNA_Poster-Collage_LOGOELINICIO.png" alt="Si no ardemos">
-        </div>
-        <div class="film-info">
-            <div class="film-title">Si no ardemos, cómo iluminar la noche</div>
-            <div class="film-meta">Kim Torres<br>México · 2025</div>
-        </div>
-    </a>
-
-    <a href="/say-goodbye/" class="film-card proximamente">
-        <div class="film-poster">
-            <img src="/img/SAY-GOODBYE-02-VFB.png" alt="Say Goodbye">
-        </div>
-        <div class="film-info">
-            <div class="film-title">Say Goodbye (Decir adiós)</div>
-            <div class="film-meta">Paloma López Carrillo<br>México · 2025</div>
-        </div>
-    </a>
-
+<a class="film-card" href="/la-hora-de-la-estrella/">
+<div class="film-poster">
+<img alt="La hora de la estrella" src="/img/HoraDaEstrela_Alternativo_64x94.png"/>
 </div>
-
+<div class="film-info">
+<div class="film-title">La hora de la estrella</div>
+<div class="film-meta">Suzana Amaral<br/>Brasil · 1985</div>
+</div>
+</a>
+<a class="film-card" href="/las-novias-del-sur/">
+<div class="film-poster">
+<img alt="Las novias del sur" src="/img/LNDS_ AFICHE_ EIC.png"/>
+</div>
+<div class="film-info">
+<div class="film-title">Las novias del sur</div>
+<div class="film-meta">Elena López Riera<br/>España · 2024</div>
+</div>
+</a>
+<a class="film-card" href="/todo-documento-de-civilizacion/">
+<div class="film-poster">
+<img alt="Todo documento de civilización" src="/img/TDDC_ AFICHE_ EIC.png"/>
+</div>
+<div class="film-info">
+<div class="film-title">Todo documento de civilización</div>
+<div class="film-meta">Tatiana Mazú González<br/>Argentina · 2024</div>
+</div>
+</a>
+<a class="film-card proximamente" href="/si-no-ardemos/">
+<div class="film-poster">
+<img alt="Si no ardemos" src="/img/SNA_Poster-Collage_LOGOELINICIO.png"/>
+</div>
+<div class="film-info">
+<div class="film-title">Si no ardemos, cómo iluminar la noche</div>
+<div class="film-meta">Kim Torres<br/>México · 2025</div>
+</div>
+</a>
+<a class="film-card proximamente" href="/say-goodbye/">
+<div class="film-poster">
+<img alt="Say Goodbye" src="/img/SAY-GOODBYE-02-VFB.png"/>
+</div>
+<div class="film-info">
+<div class="film-title">Say Goodbye (Decir adiós)</div>
+<div class="film-meta">Paloma López Carrillo<br/>México · 2025</div>
+</div>
+</a>
+</div>
 <!-- CARTELERA -->
 <div class="section-label" id="cartelera" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Cartelera</div>
-
 <div class="calendar-wrap">
-    <div class="cal-month-header">Abril 2026</div>
-    <div class="cal-columns">
-
-    <a href="/say-goodbye/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">4</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">Visions Du Réel</div>
-            <div class="cal-info-film">Say Goodbye</div>
-            <div class="cal-info-venue">Nyon, Suiza</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/SAYGOODBYE STILLS09.png" alt=""></div>
-    </a>
-
-    <a href="/say-goodbye/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">11</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">FICUNAM</div>
-            <div class="cal-info-film">Say Goodbye</div>
-            <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/SAYGOODBYE STILLS10.png" alt=""></div>
-    </a>
-
-    <a href="/say-goodbye/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">12</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">FICUNAM</div>
-            <div class="cal-info-film">Say Goodbye</div>
-            <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/SAYGOODBYE STILLS30.png" alt=""></div>
-    </a>
-
-    <a href="/las-novias-del-sur/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">16</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">Función especial</div>
-            <div class="cal-info-film">Las novias del sur</div>
-            <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/Still 1 - Las novias del sur.png" alt=""></div>
-    </a>
-
-    <a href="/las-novias-del-sur/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">17</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">Función especial</div>
-            <div class="cal-info-film">Las novias del sur</div>
-            <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/Still 3 - Las novias del sur.jpg" alt=""></div>
-    </a>
-
-    <a href="/si-no-ardemos/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">19</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">Los Cabos IFF</div>
-            <div class="cal-info-film">Si no ardemos, cómo iluminar la noche</div>
-            <div class="cal-info-venue">Los Cabos, México</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/SNA still.jpg" alt=""></div>
-    </a>
-
-    <a href="/todo-documento-de-civilizacion/" class="cal-row">
-        <div class="cal-date-box">
-            <div class="cal-day-num">24</div>
-            <div class="cal-day-label">Abr</div>
-        </div>
-        <div class="cal-info">
-            <div class="cal-info-title">DOK Leipzig</div>
-            <div class="cal-info-film">Todo documento de civilización</div>
-            <div class="cal-info-venue">Leipzig, Alemania</div>
-        </div>
-        <div class="cal-thumb"><img src="/img/stills/TDDC_ 15.jpg" alt=""></div>
-    </a>
-
-    </div><!-- /cal-columns -->
+<div class="cal-month-header">Abril 2026</div>
+<div class="cal-columns">
+<a class="cal-row" href="/say-goodbye/">
+<div class="cal-date-box">
+<div class="cal-day-num">4</div>
+<div class="cal-day-label">Abr</div>
 </div>
-
+<div class="cal-info">
+<div class="cal-info-title">Visions Du Réel</div>
+<div class="cal-info-film">Say Goodbye</div>
+<div class="cal-info-venue">Nyon, Suiza</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS09.png"/></div>
+</a>
+<a class="cal-row" href="/say-goodbye/">
+<div class="cal-date-box">
+<div class="cal-day-num">11</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">FICUNAM</div>
+<div class="cal-info-film">Say Goodbye</div>
+<div class="cal-info-venue">Cineteca Nacional · CDMX</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS10.png"/></div>
+</a>
+<a class="cal-row" href="/say-goodbye/">
+<div class="cal-date-box">
+<div class="cal-day-num">12</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">FICUNAM</div>
+<div class="cal-info-film">Say Goodbye</div>
+<div class="cal-info-venue">Cineteca Nacional · CDMX</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS30.png"/></div>
+</a>
+<a class="cal-row" href="/las-novias-del-sur/">
+<div class="cal-date-box">
+<div class="cal-day-num">16</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">Función especial</div>
+<div class="cal-info-film">Las novias del sur</div>
+<div class="cal-info-venue">Cineteca Nacional · CDMX</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/Still 1 - Las novias del sur.png"/></div>
+</a>
+<a class="cal-row" href="/las-novias-del-sur/">
+<div class="cal-date-box">
+<div class="cal-day-num">17</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">Función especial</div>
+<div class="cal-info-film">Las novias del sur</div>
+<div class="cal-info-venue">Cineteca Nacional · CDMX</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/Still 3 - Las novias del sur.jpg"/></div>
+</a>
+<a class="cal-row" href="/si-no-ardemos/">
+<div class="cal-date-box">
+<div class="cal-day-num">19</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">Los Cabos IFF</div>
+<div class="cal-info-film">Si no ardemos, cómo iluminar la noche</div>
+<div class="cal-info-venue">Los Cabos, México</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SNA still.jpg"/></div>
+</a>
+<a class="cal-row" href="/todo-documento-de-civilizacion/">
+<div class="cal-date-box">
+<div class="cal-day-num">24</div>
+<div class="cal-day-label">Abr</div>
+</div>
+<div class="cal-info">
+<div class="cal-info-title">DOK Leipzig</div>
+<div class="cal-info-film">Todo documento de civilización</div>
+<div class="cal-info-venue">Leipzig, Alemania</div>
+</div>
+<div class="cal-thumb"><img alt="" src="/img/stills/TDDC_ 15.jpg"/></div>
+</a>
+</div><!-- /cal-columns -->
+</div>
 <!-- QUIÉNES SOMOS -->
 <div class="section-label" id="quienes">Quiénes somos</div>
-
 <div class="about-section">
-    <div class="about-intro">
-        <p>Somos el inicio cine, una distribuidora mexicana de cine que acompaña a las películas para que lleguen a los espacios de exhibición en México. Pensamos y planeamos circuitos de programación, generamos estrategias de comunicación, alianzas y actividades pedagógicas para celebrar la vida de las películas. Nos mueve el impulso de creer que otras formas de distribución son posibles. Una distribución no voraz y sí amorosa, una distribución que prepondere a la película y sus posibilidades más allá de la pantalla.</p>
-    </div>
-
-    <div class="about-team">
-        <div class="team-member">
-            <img class="team-member-photo" src="/img/el inicio inglés/Mare El Inicio.jpg" alt="Mare Sánchez-Armáss">
-            <h3>Mare Sánchez-Armáss</h3>
-            <div class="role">Distribución</div>
-            <p>Ha coordinado y planificado la distribución de más de 30 títulos nacionales e internacionales de ficción, documental y animación en circuitos comerciales e independientes en México. Formada en la Industry Academy del Festival de Locarno, el Semanario Públicos del Futuro del FICUNAM y la Clínica Intensiva de Distribución del Programa Ibermedia. Ha trabajado en distribuidoras como Interior XIII y Pimienta Films, y como consultora en La Corriente del Golfo, Ambulante, Machete Cine y otras.</p>
-        </div>
-        <div class="team-member">
-            <img class="team-member-photo" src="/img/el inicio inglés/Aranxa El Inicio.JPG" alt="Arantxa Luna">
-            <h3>Arantxa Luna</h3>
-            <div class="role">Comunicación y alianzas</div>
-            <p>Escritora, investigadora y gestora cultural especializada en cine. Ha colaborado con el FICUNAM, la Gira Ambulante, el FICM y el Festival de Mar del Plata. Autora de textos en revista Nexos, Letras Libres, Revista de la Universidad y Cine PREMIÈRE. Ha desarrollado estrategias de comunicación, prensa y alianzas educativas para títulos de Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda y otros.</p>
-        </div>
-    </div>
+<div class="about-intro">
+<p data-en="We are el inicio cine, a Mexican film distribution company that supports films in reaching exhibition spaces across Mexico. We design and plan programming circuits, develop communication strategies, build partnerships, and create educational activities to celebrate the life of films. We are driven by the belief that other forms of distribution are possible — distribution that is not voracious but caring; distribution that places the film and its possibilities beyond the screen at the center." data-es="Somos el inicio cine, una distribuidora mexicana de cine que acompaña a las películas para que lleguen a los espacios de exhibición en México. Pensamos y planeamos circuitos de programación, generamos estrategias de comunicación, alianzas y actividades pedagógicas para celebrar la vida de las películas. Nos mueve el impulso de creer que otras formas de distribución son posibles. Una distribución no voraz y sí amorosa, una distribución que prepondere a la película y sus posibilidades más allá de la pantalla.">Somos el inicio cine, una distribuidora mexicana de cine que acompaña a las películas para que lleguen a los espacios de exhibición en México. Pensamos y planeamos circuitos de programación, generamos estrategias de comunicación, alianzas y actividades pedagógicas para celebrar la vida de las películas. Nos mueve el impulso de creer que otras formas de distribución son posibles. Una distribución no voraz y sí amorosa, una distribución que prepondere a la película y sus posibilidades más allá de la pantalla.</p>
 </div>
-
+<div class="about-team">
+<div class="team-member">
+<img alt="Mare Sánchez-Armáss" class="team-member-photo" src="/img/el inicio inglés/Mare El Inicio.jpg"/>
+<h3>Mare Sánchez-Armáss</h3>
+<div class="role">Distribución</div>
+<p data-en="She has coordinated and planned the distribution of more than 30 national and international fiction, documentary, and animated films within both commercial and independent circuits in Mexico, working with distribution companies such as Interior XIII and Pimienta Films. Trained at the Industry Academy of the Locarno Film Festival, the Públicos del Futuro Seminar at FICUNAM, and the Intensive Distribution Clinic of the Ibermedia Program. She has also collaborated as a consultant with La Corriente del Golfo, Ambulante, Machete Cine, and others." data-es="Ha coordinado y planificado la distribución de más de 30 títulos nacionales e internacionales de ficción, documental y animación en circuitos comerciales e independientes en México. Formada en la Industry Academy del Festival de Locarno, el Semanario Públicos del Futuro del FICUNAM y la Clínica Intensiva de Distribución del Programa Ibermedia. Ha trabajado en distribuidoras como Interior XIII y Pimienta Films, y como consultora en La Corriente del Golfo, Ambulante, Machete Cine y otras.">Ha coordinado y planificado la distribución de más de 30 títulos nacionales e internacionales de ficción, documental y animación en circuitos comerciales e independientes en México. Formada en la Industry Academy del Festival de Locarno, el Semanario Públicos del Futuro del FICUNAM y la Clínica Intensiva de Distribución del Programa Ibermedia. Ha trabajado en distribuidoras como Interior XIII y Pimienta Films, y como consultora en La Corriente del Golfo, Ambulante, Machete Cine y otras.</p>
+</div>
+<div class="team-member">
+<img alt="Arantxa Luna" class="team-member-photo" src="/img/el inicio inglés/Aranxa El Inicio.JPG"/>
+<h3>Arantxa Luna</h3>
+<div class="role">Comunicación y alianzas</div>
+<p data-en="Writer, researcher, and cultural manager specializing in film. She has collaborated with FICUNAM, Ambulante Documentary Tour, FICM, and the Mar del Plata International Film Festival. Author of essayistic texts in Nexos, Letras Libres, Revista de la Universidad, and Cine PREMIÈRE. She has developed communication strategies, press management, and educational partnerships for titles by Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda, and others." data-es="Escritora, investigadora y gestora cultural especializada en cine. Ha colaborado con el FICUNAM, la Gira Ambulante, el FICM y el Festival de Mar del Plata. Autora de textos en revista Nexos, Letras Libres, Revista de la Universidad y Cine PREMIÈRE. Ha desarrollado estrategias de comunicación, prensa y alianzas educativas para títulos de Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda y otros.">Escritora, investigadora y gestora cultural especializada en cine. Ha colaborado con el FICUNAM, la Gira Ambulante, el FICM y el Festival de Mar del Plata. Autora de textos en revista Nexos, Letras Libres, Revista de la Universidad y Cine PREMIÈRE. Ha desarrollado estrategias de comunicación, prensa y alianzas educativas para títulos de Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda y otros.</p>
+</div>
+</div>
+</div>
 <!-- SERVICIOS -->
 <div class="section-label" id="servicios">Servicios</div>
-
 <div class="services-section">
-    <div class="service-card">
-        <div class="service-number">01</div>
-        <h3>Distribución</h3>
-        <p>Acompañamos a las películas desde su estreno hasta su vida en los circuitos de exhibición en México. Planeamos circuitos de programación, gestionamos espacios y construimos alianzas para que cada película llegue a su público.</p>
-    </div>
-    <div class="service-card">
-        <div class="service-number">02</div>
-        <h3>Estrategia digital</h3>
-        <p>Diseñamos la presencia digital de las películas: comunicación, redes sociales, campañas de lanzamiento y materiales. Creamos estrategias que acompañan la vida de la película antes, durante y después del estreno.</p>
-    </div>
-    <div class="service-card">
-        <div class="service-number">03</div>
-        <h3>Consultoría</h3>
-        <p>Ofrecemos asesoría especializada en distribución y comunicación cinematográfica para productoras, festivales y realizadores que buscan trazar su ruta de exhibición con intención y criterio.</p>
-    </div>
+<div class="service-card">
+<div class="service-number">01</div>
+<h3 data-en="Distribution" data-es="Distribución">Distribución</h3>
+<p data-en="We support films from their release through their life in Mexico's exhibition circuits. We plan programming circuits, manage exhibition spaces, and build partnerships to connect each film with its audience." data-es="Acompañamos a las películas desde su estreno hasta su vida en los circuitos de exhibición en México. Planeamos circuitos de programación, gestionamos espacios y construimos alianzas para que cada película llegue a su público.">Acompañamos a las películas desde su estreno hasta su vida en los circuitos de exhibición en México. Planeamos circuitos de programación, gestionamos espacios y construimos alianzas para que cada película llegue a su público.</p>
 </div>
-
+<div class="service-card">
+<div class="service-number">02</div>
+<h3 data-en="Digital strategy" data-es="Estrategia digital">Estrategia digital</h3>
+<p data-en="We design the digital presence of films: communication, social media, launch campaigns, and materials. We create strategies that accompany the film's life before, during, and after its release." data-es="Diseñamos la presencia digital de las películas: comunicación, redes sociales, campañas de lanzamiento y materiales. Creamos estrategias que acompañan la vida de la película antes, durante y después del estreno.">Diseñamos la presencia digital de las películas: comunicación, redes sociales, campañas de lanzamiento y materiales. Creamos estrategias que acompañan la vida de la película antes, durante y después del estreno.</p>
+</div>
+<div class="service-card">
+<div class="service-number">03</div>
+<h3 data-en="Consulting" data-es="Consultoría">Consultoría</h3>
+<p data-en="We offer specialized advisory services in film distribution and communication for production companies, festivals, and filmmakers seeking to map their exhibition path with intention and clarity." data-es="Ofrecemos asesoría especializada en distribución y comunicación cinematográfica para productoras, festivales y realizadores que buscan trazar su ruta de exhibición con intención y criterio.">Ofrecemos asesoría especializada en distribución y comunicación cinematográfica para productoras, festivales y realizadores que buscan trazar su ruta de exhibición con intención y criterio.</p>
+</div>
+</div>
 <!-- CONTACTO -->
 <div class="section-label" id="contacto">Contacto</div>
-
 <div class="contact-section">
-    <div class="contact-intro">
-        <h2>Hablemos.</h2>
-        <p>Para proyecciones, distribución, talleres o cualquier colaboración.</p>
-        <div class="contact-detail"><span>Distribución</span><a href="mailto:distribucion@eliniciocine.com">distribucion@eliniciocine.com</a></div>
-        <div class="contact-detail"><span>Arantxa</span><a href="mailto:arantxa@eliniciocine.com">arantxa@eliniciocine.com</a></div>
-        <div class="contact-detail"><span>Mare</span><a href="mailto:mare@eliniciocine.com">mare@eliniciocine.com</a></div>
-        <div class="contact-detail"><span>Instagram</span><a href="#">@eliniciocine</a></div>
-    </div>
-    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="0f865944-2460-4e60-b2e6-c5e765e71999">
-        <input type="hidden" name="subject" value="Nuevo mensaje — el inicio cine">
-        <input type="hidden" name="from_name" value="el inicio cine">
-        <input type="checkbox" name="botcheck" style="display:none">
-        <input type="text" name="name" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Mensaje" required></textarea>
-        <button type="submit" id="submit-btn">Enviar</button>
-        <p class="form-msg" id="form-msg"></p>
-    </form>
+<div class="contact-intro">
+<h2 data-en="Let's talk." data-es="Hablemos.">Hablemos.</h2>
+<p data-en="For screenings, distribution, workshops, or any collaboration." data-es="Para proyecciones, distribución, talleres o cualquier colaboración.">Para proyecciones, distribución, talleres o cualquier colaboración.</p>
+<div class="contact-detail"><span data-en="Distribution" data-es="Distribución">Distribución</span><a href="mailto:distribucion@eliniciocine.com">distribucion@eliniciocine.com</a></div>
+<div class="contact-detail"><span>Arantxa</span><a href="mailto:arantxa@eliniciocine.com">arantxa@eliniciocine.com</a></div>
+<div class="contact-detail"><span>Mare</span><a href="mailto:mare@eliniciocine.com">mare@eliniciocine.com</a></div>
+<div class="contact-detail"><span>Instagram</span><a href="#">@eliniciocine</a></div>
 </div>
-
+<form action="https://api.web3forms.com/submit" class="contact-form" id="contact-form" method="POST">
+<input name="access_key" type="hidden" value="0f865944-2460-4e60-b2e6-c5e765e71999"/>
+<input name="subject" type="hidden" value="Nuevo mensaje — el inicio cine"/>
+<input name="from_name" type="hidden" value="el inicio cine"/>
+<input name="botcheck" style="display:none" type="checkbox"/>
+<input name="name" placeholder="Nombre" required="" type="text"/>
+<input name="email" placeholder="Email" required="" type="email"/>
+<textarea name="message" placeholder="Mensaje" required=""></textarea>
+<button data-en="Send" data-es="Enviar" id="submit-btn" type="submit">Enviar</button>
+<p class="form-msg" id="form-msg"></p>
+</form>
+</div>
 <footer>
-    <span>© 2025 el inicio cine</span>
-    <a href="#">Instagram</a>
+<span>© 2025 el inicio cine</span>
+<a href="#">Instagram</a>
 </footer>
-
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -936,5 +908,19 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     }
 });
 </script>
-</body>
+<script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l; localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script></body>
 </html>
