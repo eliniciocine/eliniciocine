@@ -648,7 +648,21 @@ footer a { color: var(--red); text-decoration: none; }
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 <link href="https://www.eliniciocine.mx/" rel="canonical"/>
 <link href="/img/favicon.png" rel="icon" type="image/png"/>
 <meta content="https://www.eliniciocine.mx/" property="og:url"/>
@@ -664,6 +678,7 @@ footer a { color: var(--red); text-decoration: none; }
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="#cartelera">Cartelera</a></li>
 <li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -684,7 +699,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="film-grid">
 <a class="film-card" href="/la-hora-de-la-estrella/">
 <div class="film-poster">
-<img alt="La hora de la estrella" src="/img/HoraDaEstrela_Alternativo_64x94.png"/>
+<img alt="La hora de la estrella" src="/img/HoraDaEstrela_Alternativo_64x94.jpg" loading="lazy"/>
 </div>
 <div class="film-info">
 <div class="film-title" data-en="The Hour of the Star" data-es="La hora de la estrella">La hora de la estrella</div>
@@ -693,7 +708,7 @@ footer a { color: var(--red); text-decoration: none; }
 </a>
 <a class="film-card" href="/las-novias-del-sur/">
 <div class="film-poster">
-<img alt="Las novias del sur" src="/img/LNDS_ AFICHE_ EIC.png"/>
+<img alt="Las novias del sur" src="/img/LNDS_ AFICHE_ EIC.jpg" loading="lazy"/>
 </div>
 <div class="film-info">
 <div class="film-title" data-en="Southern Brides" data-es="Las novias del sur">Las novias del sur</div>
@@ -702,7 +717,7 @@ footer a { color: var(--red); text-decoration: none; }
 </a>
 <a class="film-card" href="/todo-documento-de-civilizacion/">
 <div class="film-poster">
-<img alt="Todo documento de civilización" src="/img/TDDC_ AFICHE_ EIC.png"/>
+<img alt="Todo documento de civilización" src="/img/TDDC_ AFICHE_ EIC.jpg" loading="lazy"/>
 </div>
 <div class="film-info">
 <div class="film-title" data-en="Every Document of Civilization" data-es="Todo documento de civilización">Todo documento de civilización</div>
@@ -711,7 +726,7 @@ footer a { color: var(--red); text-decoration: none; }
 </a>
 <a class="film-card proximamente" href="/si-no-ardemos/">
 <div class="film-poster">
-<img alt="Si no ardemos" src="/img/SNA_Poster-Collage_LOGOELINICIO.png"/>
+<img alt="Si no ardemos" src="/img/SNA_Poster-Collage_LOGOELINICIO.jpg" loading="lazy"/>
 </div>
 <div class="film-info">
 <div class="film-title" data-en="If We Don't Burn, How Do We Light Up the Night" data-es="Si no ardemos, cómo iluminar la noche">Si no ardemos, cómo iluminar la noche</div>
@@ -720,7 +735,7 @@ footer a { color: var(--red); text-decoration: none; }
 </a>
 <a class="film-card proximamente" href="/say-goodbye/">
 <div class="film-poster">
-<img alt="Say Goodbye" src="/img/SAY-GOODBYE-02-VFB.png"/>
+<img alt="Say Goodbye" src="/img/SAY-GOODBYE-02-VFB.jpg" loading="lazy"/>
 </div>
 <div class="film-info">
 <div class="film-title" data-en="Say Goodbye" data-es="Say Goodbye (Decir adiós)">Say Goodbye (Decir adiós)</div>
@@ -743,7 +758,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Say Goodbye</div>
 <div class="cal-info-venue">Nyon, Suiza</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS09.png"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS09.png" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/say-goodbye/">
 <div class="cal-date-box">
@@ -755,7 +770,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Say Goodbye</div>
 <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS10.png"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS10.png" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/say-goodbye/">
 <div class="cal-date-box">
@@ -767,7 +782,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Say Goodbye</div>
 <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS30.png"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SAYGOODBYE STILLS30.png" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/las-novias-del-sur/">
 <div class="cal-date-box">
@@ -779,7 +794,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Las novias del sur</div>
 <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/Still 1 - Las novias del sur.png"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/Still 1 - Las novias del sur.png" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/las-novias-del-sur/">
 <div class="cal-date-box">
@@ -791,7 +806,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Las novias del sur</div>
 <div class="cal-info-venue">Cineteca Nacional · CDMX</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/Still 3 - Las novias del sur.jpg"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/Still 3 - Las novias del sur.jpg" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/si-no-ardemos/">
 <div class="cal-date-box">
@@ -803,7 +818,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Si no ardemos, cómo iluminar la noche</div>
 <div class="cal-info-venue">Los Cabos, México</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/SNA still.jpg"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/SNA still.jpg" loading="lazy"/></div>
 </a>
 <a class="cal-row" href="/todo-documento-de-civilizacion/">
 <div class="cal-date-box">
@@ -815,7 +830,7 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="cal-info-film">Todo documento de civilización</div>
 <div class="cal-info-venue">Leipzig, Alemania</div>
 </div>
-<div class="cal-thumb"><img alt="" src="/img/stills/TDDC_ 15.jpg"/></div>
+<div class="cal-thumb"><img alt="" src="/img/stills/TDDC_ 15.jpg" loading="lazy"/></div>
 </a>
 </div><!-- /cal-columns -->
 </div>
@@ -827,13 +842,13 @@ footer a { color: var(--red); text-decoration: none; }
 </div>
 <div class="about-team">
 <div class="team-member">
-<img alt="Mare Sánchez-Armáss" class="team-member-photo" src="/img/el inicio inglés/Mare El Inicio.jpg"/>
+<img alt="Mare Sánchez-Armáss" class="team-member-photo" src="/img/el inicio inglés/Mare El Inicio.jpg" loading="lazy"/>
 <h3>Mare Sánchez-Armáss</h3>
 <div class="role">Distribución</div>
 <p data-en="She has coordinated and planned the distribution of more than 30 national and international fiction, documentary, and animated films within both commercial and independent circuits in Mexico, working with distribution companies such as Interior XIII and Pimienta Films. Trained at the Industry Academy of the Locarno Film Festival, the Públicos del Futuro Seminar at FICUNAM, and the Intensive Distribution Clinic of the Ibermedia Program. She has also collaborated as a consultant with La Corriente del Golfo, Ambulante, Machete Cine, and others." data-es="Ha coordinado y planificado la distribución de más de 30 títulos nacionales e internacionales de ficción, documental y animación en circuitos comerciales e independientes en México. Formada en la Industry Academy del Festival de Locarno, el Semanario Públicos del Futuro del FICUNAM y la Clínica Intensiva de Distribución del Programa Ibermedia. Ha trabajado en distribuidoras como Interior XIII y Pimienta Films, y como consultora en La Corriente del Golfo, Ambulante, Machete Cine y otras.">Ha coordinado y planificado la distribución de más de 30 títulos nacionales e internacionales de ficción, documental y animación en circuitos comerciales e independientes en México. Formada en la Industry Academy del Festival de Locarno, el Semanario Públicos del Futuro del FICUNAM y la Clínica Intensiva de Distribución del Programa Ibermedia. Ha trabajado en distribuidoras como Interior XIII y Pimienta Films, y como consultora en La Corriente del Golfo, Ambulante, Machete Cine y otras.</p>
 </div>
 <div class="team-member">
-<img alt="Arantxa Luna" class="team-member-photo" src="/img/el inicio inglés/Aranxa El Inicio.JPG"/>
+<img alt="Arantxa Luna" class="team-member-photo" src="/img/el inicio inglés/Aranxa El Inicio.JPG" loading="lazy"/>
 <h3>Arantxa Luna</h3>
 <div class="role">Comunicación y alianzas</div>
 <p data-en="Writer, researcher, and cultural manager specializing in film. She has collaborated with FICUNAM, Ambulante Documentary Tour, FICM, and the Mar del Plata International Film Festival. Author of essayistic texts in Nexos, Letras Libres, Revista de la Universidad, and Cine PREMIÈRE. She has developed communication strategies, press management, and educational partnerships for titles by Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda, and others." data-es="Escritora, investigadora y gestora cultural especializada en cine. Ha colaborado con el FICUNAM, la Gira Ambulante, el FICM y el Festival de Mar del Plata. Autora de textos en revista Nexos, Letras Libres, Revista de la Universidad y Cine PREMIÈRE. Ha desarrollado estrategias de comunicación, prensa y alianzas educativas para títulos de Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda y otros.">Escritora, investigadora y gestora cultural especializada en cine. Ha colaborado con el FICUNAM, la Gira Ambulante, el FICM y el Festival de Mar del Plata. Autora de textos en revista Nexos, Letras Libres, Revista de la Universidad y Cine PREMIÈRE. Ha desarrollado estrategias de comunicación, prensa y alianzas educativas para títulos de Jim Jarmusch, Claire Denis, Carla Simón, Nicolás Pereda y otros.</p>
@@ -934,5 +949,23 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>

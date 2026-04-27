@@ -221,12 +221,27 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 </head>
 <body>
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
 <li><a class="active" data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -250,15 +265,15 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 <p>Posterior a la proyección, la directora mexicana María Novaro, junto a Brenda Lozano, escritora, y Lilia Lustosa, investigadora de cine brasileño, charlaron sobre las conexiones entre la literatura y el cine, particularmente sobre las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.</p>
 </div>
 <div style="margin: 2rem 0; display: flex; justify-content: center;">
-<img alt="Invitación Función especial La hora de la estrella" src="/img/invitacion-hora_estrella-blanco.jpg" style="max-width: 420px; width: 100%; height: auto;"/>
+<img alt="Invitación Función especial La hora de la estrella" src="/img/invitacion-hora_estrella-blanco.jpg" loading="lazy" style="max-width: 420px; width: 100%; height: auto;"/>
 </div>
 <div class="section-tag">Imágenes</div>
 <div class="photo-grid">
-<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/PHOTO-2026-04-17-12-44-11.jpg"/></div>
-<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/537dd631-af30-4bba-afae-de60ba8b99d3.JPG"/></div>
-<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG"/></div>
-<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/IMG_3079.jpg"/></div>
-<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/IMG_3085.jpg"/></div>
+<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/PHOTO-2026-04-17-12-44-11.jpg" loading="lazy"/></div>
+<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/537dd631-af30-4bba-afae-de60ba8b99d3.JPG" loading="lazy"/></div>
+<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG" loading="lazy"/></div>
+<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/IMG_3079.jpg" loading="lazy"/></div>
+<div class="photo-grid-item"><img alt="" onclick="openLightbox(this.src)" src="/img/IMG_3085.jpg" loading="lazy"/></div>
 </div>
 <div style="margin: 2rem 0; display: flex; justify-content: center;">
 <a href="https://www.youtube.com/watch?v=aCkGunsfaPs" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="display: inline-block; padding: 1rem 2.75rem; background: #ef9caa; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" target="_blank">Escucha la charla completa aquí</a>
@@ -266,31 +281,31 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 <div class="section-tag">Invitadas</div>
 <div class="guests-grid">
 <div class="guest-item">
-<img alt="María Novaro" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg"/>
+<img alt="María Novaro" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg" loading="lazy"/>
 <div class="guest-name">María Novaro</div>
 <div class="guest-role">Directora de cine</div>
 </div>
 <div class="guest-item">
-<img alt="Brenda Lozano" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg"/>
+<img alt="Brenda Lozano" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg" loading="lazy"/>
 <div class="guest-name">Brenda Lozano</div>
 <div class="guest-role">Escritora</div>
 </div>
 <div class="guest-item">
-<img alt="Lilia Lustosa" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg"/>
+<img alt="Lilia Lustosa" class="guest-photo" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg" loading="lazy"/>
 <div class="guest-name">Lilia Lustosa</div>
 <div class="guest-role">Investigadora de cine brasileño</div>
 </div>
 </div>
 <div class="section-tag">Alianzas</div>
 <div class="logos-row">
-<img alt="Instituto Guimarães Rosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png"/>
-<img alt="Fondo de Cultura Económica" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png"/>
-<img alt="Embajada de Brasil" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png"/>
+<img alt="Instituto Guimarães Rosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png" loading="lazy"/>
+<img alt="Fondo de Cultura Económica" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png" loading="lazy"/>
+<img alt="Embajada de Brasil" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png" loading="lazy"/>
 </div>
 </div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
 <span class="lightbox-close" onclick="closeLightbox()">×</span>
-<img alt="" id="lightbox-img" src=""/>
+<img alt="" id="lightbox-img" src="" loading="lazy"/>
 </div>
 <script>
 function openLightbox(src) {
@@ -319,5 +334,23 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>

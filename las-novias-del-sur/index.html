@@ -216,7 +216,21 @@ nav {
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 <link href="https://www.eliniciocine.mx/las-novias-del-sur/" rel="canonical"/>
 <link href="/img/favicon.png" rel="icon" type="image/png"/>
 <meta content="https://www.eliniciocine.mx/las-novias-del-sur/" property="og:url"/>
@@ -232,6 +246,7 @@ nav {
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
 <li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -243,9 +258,9 @@ nav {
 </div>
 </nav>
 <div class="stills-wrap">
-<div class="still-item"><img alt="" src="/img/stills/Still 1 - Las novias del sur.png"/></div>
-<div class="still-item"><img alt="" src="/img/stills/Still 3 - Las novias del sur.jpg"/></div>
-<div class="still-item"><img alt="" src="/img/stills/Still 6 - Las novias del sur.png"/></div>
+<div class="still-item"><img alt="" src="/img/stills/Still 1 - Las novias del sur.png" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/Still 3 - Las novias del sur.jpg" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/Still 6 - Las novias del sur.png" loading="lazy"/></div>
 </div>
 <div class="film-main">
 <div class="film-left">
@@ -292,7 +307,7 @@ nav {
 </div>
 <div class="film-right">
 <a class="trailer-thumb" href="https://www.youtube.com/watch?v=cJ-fX9BYgNY" target="_blank">
-<img alt="Tráiler — Las novias del sur" src="https://img.youtube.com/vi/cJ-fX9BYgNY/maxresdefault.jpg"/>
+<img alt="Tráiler — Las novias del sur" src="https://img.youtube.com/vi/cJ-fX9BYgNY/maxresdefault.jpg" loading="lazy"/>
 <div class="play-btn">
 <svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
 <circle cx="22" cy="22" fill="rgba(255,255,255,0.88)" r="22"></circle>
@@ -356,11 +371,11 @@ nav {
 <p class="event-desc" data-en="The film had its national premiere at Cineteca Nacional, where Elena López Riera engaged in a conversation with attendees, moderated by Mexican film critic Oralia Torres." data-es="La película tuvo su premier nacional en la Cineteca Nacional, donde Elena López Riera intercambió ideas con las y los asistentes, en una conversación moderada por Oralia Torres, crítica de cine mexicana.">La película tuvo su premier nacional en la Cineteca Nacional, donde Elena López Riera intercambió ideas con las y los asistentes, en una conversación moderada por Oralia Torres, crítica de cine mexicana.</p>
 <div class="event-guests">
 <div class="guest-item">
-<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png"/>
+<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png" loading="lazy"/>
 <span class="guest-name">Elena López Riera</span>
 </div>
 <div class="guest-item">
-<img alt="Oralia Torres" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Oralia Torres.webp"/>
+<img alt="Oralia Torres" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Oralia Torres.webp" loading="lazy"/>
 <span class="guest-name">Oralia Torres</span>
 </div>
 </div>
@@ -375,17 +390,17 @@ nav {
 <p class="event-desc" data-en="The Sala Panorama at Centro Cultural de España en México hosted a retrospective dedicated to Elena's documentary work, featuring screenings of her short films Pueblo (2015), Las vísceras (2016), and Those Who Desire (2018), along with a screening of Southern Brides. This program was accompanied by a conversation between Elena López Riera, the audience, and Mexican writer Natalia Durand." data-es="La Sala Panorama del Centro Cultural de España en México albergó una retrospectiva del trabajo documental de Elena: Pueblo (2015), Las vísceras (2016) y Los que desean (2018), acompañada de una charla entre Elena, el público y la escritora mexicana Natalia Durand.">La Sala Panorama del Centro Cultural de España en México albergó una retrospectiva del trabajo documental de Elena: Pueblo (2015), Las vísceras (2016) y Los que desean (2018), acompañada de una charla entre Elena, el público y la escritora mexicana Natalia Durand.</p>
 <div class="event-guests">
 <div class="guest-item">
-<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png"/>
+<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png" loading="lazy"/>
 <span class="guest-name">Elena López Riera</span>
 </div>
 <div class="guest-item">
-<img alt="Natalia Durand" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg"/>
+<img alt="Natalia Durand" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg" loading="lazy"/>
 <span class="guest-name">Natalia Durand</span>
 </div>
 </div>
 <div class="event-logos">
-<img alt="Aliados" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Copia de LOGOS.png"/>
-<img alt="Marvin &amp; Wayne" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/LOGO-Marvin&amp;Wayne-negro-sin-fondo.png"/>
+<img alt="Aliados" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Copia de LOGOS.png" loading="lazy"/>
+<img alt="Marvin &amp; Wayne" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/LOGO-Marvin&amp;Wayne-negro-sin-fondo.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -398,7 +413,7 @@ nav {
 <p class="event-desc" data-en='Elena López Riera led the workshop "First-Person Storytelling: From Collective Memory to Personal Memory," in which ten emerging Mexican filmmakers presented and developed their documentary projects.' data-es='Elena impartió el taller "Contar en primera persona, de la memoria colectiva a la memoria personal", en el que 10 directoras y directores mexicanos emergentes presentaron y trabajaron sus proyectos documentales.'>Elena impartió el taller "Contar en primera persona, de la memoria colectiva a la memoria personal", en el que 10 directoras y directores mexicanos emergentes presentaron y trabajaron sus proyectos documentales.</p>
 <div class="event-guests">
 <div class="guest-item">
-<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png"/>
+<img alt="Elena López Riera" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/ELENA LOPEZ RIERA.png" loading="lazy"/>
 <span class="guest-name">Elena López Riera</span>
 </div>
 </div>
@@ -422,5 +437,23 @@ nav {
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>

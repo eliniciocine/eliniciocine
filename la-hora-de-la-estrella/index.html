@@ -212,7 +212,21 @@ nav {
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 <link href="https://www.eliniciocine.mx/la-hora-de-la-estrella/" rel="canonical"/>
 <link href="/img/favicon.png" rel="icon" type="image/png"/>
 <meta content="https://www.eliniciocine.mx/la-hora-de-la-estrella/" property="og:url"/>
@@ -228,6 +242,7 @@ nav {
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
 <li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -239,9 +254,9 @@ nav {
 </div>
 </nav>
 <div class="stills-wrap">
-<div class="still-item"><img alt="" src="/img/stills/LHDLE 2.png"/></div>
-<div class="still-item"><img alt="" src="/img/stills/LHDLE 3.png"/></div>
-<div class="still-item"><img alt="" src="/img/stills/LHDLE- 2.png"/></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE 2.png" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE 3.png" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/LHDLE- 2.png" loading="lazy"/></div>
 </div>
 <div class="film-main">
 <div class="film-left">
@@ -274,7 +289,7 @@ nav {
 </div>
 <div class="film-right">
 <a class="trailer-thumb" href="https://www.youtube.com/watch?v=4vZsk7PSOeI" target="_blank">
-<img alt="Tráiler — La hora de la estrella" src="https://img.youtube.com/vi/4vZsk7PSOeI/maxresdefault.jpg"/>
+<img alt="Tráiler — La hora de la estrella" src="https://img.youtube.com/vi/4vZsk7PSOeI/maxresdefault.jpg" loading="lazy"/>
 <div class="play-btn">
 <svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
 <circle cx="22" cy="22" fill="rgba(255,255,255,0.88)" r="22"></circle>
@@ -338,22 +353,22 @@ nav {
 <p class="event-desc" data-en="In partnership with the Guimarães Rosa Institute Mexico of the Government of Brazil and Fondo de Cultura Económica, a special screening of The Hour of the Star, directed by Suzana Amaral, was held at Cine Lido, Centro Cultural Bella Época, in Mexico City. Following the screening, Mexican director María Novaro, alongside writer Brenda Lozano and Brazilian cinema researcher Lilia Lustosa, engaged in a conversation about the connections between literature and film, focusing in particular on the intersections between the work of Suzana Amaral and Clarice Lispector." data-es="En alianza con el Instituto Guimarães Rosa México y el Fondo de Cultura Económica, se realizó una proyección especial de La hora de la estrella. Posterior a la función, la directora mexicana María Novaro, la escritora Brenda Lozano y la investigadora de cine brasileño Lilia Lustosa conversaron sobre las conexiones entre la literatura y el cine, y las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.">En alianza con el Instituto Guimarães Rosa México y el Fondo de Cultura Económica, se realizó una proyección especial de La hora de la estrella. Posterior a la función, la directora mexicana María Novaro, la escritora Brenda Lozano y la investigadora de cine brasileño Lilia Lustosa conversaron sobre las conexiones entre la literatura y el cine, y las intersecciones entre la obra de Suzana Amaral y Clarice Lispector.</p>
 <div class="event-guests">
 <div class="guest-item">
-<img alt="María Novaro" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg"/>
+<img alt="María Novaro" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/MARIA NOVARO.jpg" loading="lazy"/>
 <span class="guest-name">María Novaro</span>
 </div>
 <div class="guest-item">
-<img alt="Brenda Lozano" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg"/>
+<img alt="Brenda Lozano" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/BRENDA LOZANO.jpg" loading="lazy"/>
 <span class="guest-name">Brenda Lozano</span>
 </div>
 <div class="guest-item">
-<img alt="Lilia Lustosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg"/>
+<img alt="Lilia Lustosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LILIA LUSTOSA.jpg" loading="lazy"/>
 <span class="guest-name">Lilia Lustosa</span>
 </div>
 </div>
 <div class="event-logos">
-<img alt="Instituto Guimarães Rosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png"/>
-<img alt="Fondo de Cultura Económica" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png"/>
-<img alt="Embajada de Brasil" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png"/>
+<img alt="Instituto Guimarães Rosa" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO INSTITUTO GUIMARÃES ROSA.png" loading="lazy"/>
+<img alt="Fondo de Cultura Económica" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO FONDO DE CULTURAL ECONOMICA.png" loading="lazy"/>
+<img alt="Embajada de Brasil" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/LOGO EMBAJADA DE BRASIL.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -375,5 +390,23 @@ nav {
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>

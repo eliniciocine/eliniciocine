@@ -212,7 +212,21 @@ nav {
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 <link href="https://www.eliniciocine.mx/todo-documento-de-civilizacion/" rel="canonical"/>
 <link href="/img/favicon.png" rel="icon" type="image/png"/>
 <meta content="https://www.eliniciocine.mx/todo-documento-de-civilizacion/" property="og:url"/>
@@ -228,6 +242,7 @@ nav {
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
 <li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -239,9 +254,9 @@ nav {
 </div>
 </nav>
 <div class="stills-wrap">
-<div class="still-item"><img alt="" src="/img/stills/TDDC_ 15.jpg"/></div>
-<div class="still-item"><img alt="" src="/img/stills/TDDC_ 16.jpg"/></div>
-<div class="still-item"><img alt="" src="/img/stills/TDDC_ 21.jpg"/></div>
+<div class="still-item"><img alt="" src="/img/stills/TDDC_ 15.jpg" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/TDDC_ 16.jpg" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/TDDC_ 21.jpg" loading="lazy"/></div>
 </div>
 <div class="film-main">
 <div class="film-left">
@@ -274,7 +289,7 @@ nav {
 </div>
 <div class="film-right">
 <a class="trailer-thumb" href="https://www.youtube.com/watch?v=oWMMvCQpl_E" target="_blank">
-<img alt="Tráiler — Todo documento de civilización" src="https://img.youtube.com/vi/oWMMvCQpl_E/maxresdefault.jpg"/>
+<img alt="Tráiler — Todo documento de civilización" src="https://img.youtube.com/vi/oWMMvCQpl_E/maxresdefault.jpg" loading="lazy"/>
 <div class="play-btn">
 <svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
 <circle cx="22" cy="22" fill="rgba(255,255,255,0.88)" r="22"></circle>
@@ -358,21 +373,21 @@ nav {
 <p class="event-desc" data-en="In partnership with Centro de Cultura Digital and the collective Antes Muertx Cine, a special screening of Every Document of Civilization, directed by Tatiana Mazú, was held. Following the screening, Tatiana Mazú was joined in conversation by Mexican journalist Daniela Rea and activist and scholar Alicia de los Ríos." data-es="En alianza con el Centro de Cultura Digital y el Colectivo Antes Muertx Cine, se realizó una función especial de Todo documento de civilización. Al término, Tatiana Mazú conversó con la periodista mexicana Daniela Rea y la activista y académica Alicia de los Ríos sobre el papel del cine en la problemática de la desaparición forzada en América Latina, sus límites y alcances a través de la experimentación sonora y visual.">En alianza con el Centro de Cultura Digital y el Colectivo Antes Muertx Cine, se realizó una función especial de Todo documento de civilización. Al término, Tatiana Mazú conversó con la periodista mexicana Daniela Rea y la activista y académica Alicia de los Ríos sobre el papel del cine en la problemática de la desaparición forzada en América Latina, sus límites y alcances a través de la experimentación sonora y visual.</p>
 <div class="event-guests">
 <div class="guest-item">
-<img alt="Tatiana Mazú" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/TATIANA MAZÚ .jpg"/>
+<img alt="Tatiana Mazú" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/TATIANA MAZÚ .jpg" loading="lazy"/>
 <span class="guest-name">Tatiana Mazú</span>
 </div>
 <div class="guest-item">
-<img alt="Daniela Rea" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/DANIELA REA.png"/>
+<img alt="Daniela Rea" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/DANIELA REA.png" loading="lazy"/>
 <span class="guest-name">Daniela Rea</span>
 </div>
 <div class="guest-item">
-<img alt="Alicia de los Ríos" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ALICIA DE LOS RÍOS MERINO.png"/>
+<img alt="Alicia de los Ríos" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ALICIA DE LOS RÍOS MERINO.png" loading="lazy"/>
 <span class="guest-name">Alicia de los Ríos</span>
 </div>
 </div>
 <div class="event-logos">
-<img alt="Centro de Cultura Digital" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/CCD.gif"/>
-<img alt="Antes Muertx Cine" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ANTES MUERTO FINAL (1).png"/>
+<img alt="Centro de Cultura Digital" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/CCD.gif" loading="lazy"/>
+<img alt="Antes Muertx Cine" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/ANTES MUERTO FINAL (1).png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -394,5 +409,23 @@ nav {
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>

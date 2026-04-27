@@ -148,7 +148,21 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
 .lang-btn.active{color:var(--dark);}
 .lang-btn:not(.active){color:var(--muted);}
-.lang-btn:hover{color:var(--dark);}</style>
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
 <link href="https://www.eliniciocine.mx/alianzas/" rel="canonical"/>
 <link href="/img/favicon.png" rel="icon" type="image/png"/>
 <meta content="https://www.eliniciocine.mx/alianzas/" property="og:url"/>
@@ -164,6 +178,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 <nav>
 <a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
 <div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 <ul class="nav-links">
 <li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
 <li><a class="active" data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
@@ -181,7 +196,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 <div class="events-list">
 <a class="event-row" href="/alianzas/la-hora-de-la-estrella/">
 <div class="row-date">Feb<br/>2026</div>
-<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG"/></div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento la hora de la estrella/b04f3a0c-0fd2-4205-922e-36a94d3ec9c1.JPG" loading="lazy"/></div>
 <div class="row-body">
 <div class="row-film-tag">La hora de la estrella</div>
 <h2 class="row-title" data-en="Special screening + talk" data-es="Función especial + charla">Función especial + charla</h2>
@@ -192,7 +207,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </a>
 <a class="event-row" href="/alianzas/todo-documento-de-civilizacion/">
 <div class="row-date">Nov<br/>2025</div>
-<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/3F8DBC98-3036-43BA-848D-B76ECB329800 2.JPG"/></div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Evento conversatorio Todo documento/3F8DBC98-3036-43BA-848D-B76ECB329800 2.JPG" loading="lazy"/></div>
 <div class="row-body">
 <div class="row-film-tag">Todo documento de civilización</div>
 <h2 class="row-title" data-en="Special screening + conversation" data-es="Función especial + conversatorio">Función especial + conversatorio</h2>
@@ -203,7 +218,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </a>
 <a class="event-row" href="/alianzas/las-novias-taller/">
 <div class="row-date">Sep<br/>2025</div>
-<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Taller/00168F5F-BCD5-47C6-95F7-A11D96D7F734.JPG"/></div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Taller/00168F5F-BCD5-47C6-95F7-A11D96D7F734.JPG" loading="lazy"/></div>
 <div class="row-body">
 <div class="row-film-tag">Las novias del sur</div>
 <h2 class="row-title" data-en="Workshop: First-Person Storytelling" data-es="Taller: Contar en primera persona">Taller: Contar en primera persona</h2>
@@ -214,7 +229,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </a>
 <a class="event-row" href="/alianzas/las-novias-retrospectiva/">
 <div class="row-date">Sep<br/>2025</div>
-<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg"/></div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Invitadas y aliados/Natalia Durand.jpeg" loading="lazy"/></div>
 <div class="row-body">
 <div class="row-film-tag">Las novias del sur</div>
 <h2 class="row-title" data-en="Retrospective + talk" data-es="Retrospectiva + charla">Retrospectiva + charla</h2>
@@ -225,7 +240,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </a>
 <a class="event-row" href="/alianzas/las-novias-premier/">
 <div class="row-date">Sep<br/>2025</div>
-<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg"/></div>
+<div class="row-img"><img alt="" src="/img/el inicio inglés/EVENTOS/Eventos Las novias del sur/Estrenos/IMG_7617.jpg" loading="lazy"/></div>
 <div class="row-body">
 <div class="row-film-tag">Las novias del sur</div>
 <h2 class="row-title" data-en="National premiere + Q&amp;amp;A" data-es="Premier nacional + Q&amp;amp;A">Premier nacional + Q&amp;A</h2>
@@ -251,5 +266,23 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
     setLang(lang);
   });
 })();
-</script></body>
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
 </html>
