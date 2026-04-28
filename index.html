@@ -178,13 +178,9 @@ nav {
     position: relative;
 }
 
-.film-card.proximamente { margin-top: 2rem; }
-
-.film-card.proximamente::after {
+.film-card.proximamente::before {
     content: 'Próximamente';
-    position: absolute;
-    top: -1.6rem;
-    left: 0;
+    display: block;
     background: var(--blue);
     color: #fff;
     font-family: 'Space Grotesk', sans-serif;
@@ -193,6 +189,7 @@ nav {
     letter-spacing: 0.07em;
     text-transform: uppercase;
     padding: 0.25rem 0.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .film-poster {
