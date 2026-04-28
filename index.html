@@ -192,6 +192,25 @@ nav {
     margin-bottom: 0.5rem;
 }
 
+@media (min-width: 601px) {
+    .film-card { padding-top: 2rem; }
+    .film-card.proximamente::before { display: none; }
+    .film-card.proximamente::after {
+        content: 'Próximamente';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--blue);
+        color: #fff;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.6rem;
+    }
+}
+
 .film-poster {
     width: 100%;
     aspect-ratio: 2 / 3;
