@@ -18,20 +18,15 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover, .nav-links a.active { color: var(--red); }
 
-.page-wrap {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 3rem 4% 6rem;
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 4rem;
-    align-items: start;
-}
-
+.page-header { max-width: 1050px; margin: 0 auto; padding: 3rem 4% 0; }
 .back-link { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 2rem; transition: color 0.15s; }
 .back-link:hover { color: var(--dark); }
+.page-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 3rem; }
 
-.page-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 2rem; }
+.project-entry { max-width: 1050px; margin: 0 auto; padding: 0 4% 6rem; }
+.project-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dark); border-top: 1.5px solid var(--dark); padding-top: 1.5rem; margin-bottom: 2.5rem; }
+
+.project-grid { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
 
 .page-body { font-size: 1.02rem; font-weight: 300; line-height: 1.95; color: #1a1a1a; }
 .page-body p + p { margin-top: 1.25rem; }
@@ -46,8 +41,6 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .sidebar { position: sticky; top: 6rem; }
 .poster-wrap { border: 1.5px solid var(--dark); overflow: hidden; }
 .poster-wrap img { width: 100%; height: auto; display: block; }
-.poster-placeholder { width: 100%; aspect-ratio: 2 / 3; background: #f0f0f0; display: flex; align-items: center; justify-content: center; }
-.poster-placeholder span { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; }
 
 .nav-right { display: flex; align-items: center; gap: 2rem; }
 .lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
@@ -57,7 +50,7 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 .lang-btn:hover{color:var(--dark);}
 
 @media (max-width: 768px) {
-    .page-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+    .project-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .sidebar { position: static; }
     .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
     .nav-links.open { display: flex; }
@@ -89,40 +82,46 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 </div>
 </nav>
 
-<div class="page-wrap">
-  <!-- COLUMNA PRINCIPAL -->
-  <div>
-    <a class="back-link" data-en="← Back" data-es="← Inicio" href="/">← Inicio</a>
-    <h1 class="page-title" data-en="Consulting" data-es="Consultoría">Consultoría</h1>
+<div class="page-header">
+  <a class="back-link" data-en="← Back" data-es="← Inicio" href="/">← Inicio</a>
+  <h1 class="page-title" data-en="Consulting" data-es="Consultoría">Consultoría</h1>
+</div>
 
-    <div class="page-body">
-      <p data-en="For the project &lt;em style=&quot;color:var(--blue);&quot;&gt;Louis Riel or The Sky Touches the Earth&lt;/em&gt;, a comprehensive strategy covering exhibition, public relations, and social media was designed and executed." data-es="Para el proyecto &lt;em style=&quot;color:var(--blue);&quot;&gt;Louis Riel o El cielo toca la tierra&lt;/em&gt;, se diseñó y ejecutó una estrategia integral de exhibición, relaciones públicas y difusión en redes sociales.">Para el proyecto <em style="color:var(--blue);">Louis Riel o El cielo toca la tierra</em>, se diseñó y ejecutó una estrategia integral de exhibición, relaciones públicas y difusión en redes sociales.</p>
-      <p data-en="The service focused on creating a strategic circuit across cultural and independent venues, encompassing programming coordination, logistical delivery of materials, and the organization of screenings with Q&amp;A sessions." data-es="El servicio se centró en la creación de un circuito estratégico en salas culturales e independientes, abarcando la coordinación de la programación, la entrega logística de materiales y la organización de funciones con sesiones de preguntas y respuestas.">El servicio se centró en la creación de un circuito estratégico en salas culturales e independientes, abarcando la coordinación de la programación, la entrega logística de materiales y la organización de funciones con sesiones de preguntas y respuestas.</p>
-      <p data-en="Press outreach was led at a national level, including drafting press releases, managing interviews, and inviting media to the premiere screening." data-es="Asimismo, se lideró el contacto con la prensa nacional mediante la redacción de boletines, la gestión de entrevistas y la convocatoria a medios para la función de estreno.">Asimismo, se lideró el contacto con la prensa nacional mediante la redacción de boletines, la gestión de entrevistas y la convocatoria a medios para la función de estreno.</p>
-      <p data-en="This work was complemented by the management and creation of Instagram content, along with the consolidation of box office and attendance reports to evaluate the film's performance and reach." data-es="Todo este trabajo se complementó con la administración y creación de contenidos para Instagram, además de la consolidación de reportes de taquilla y asistencia para evaluar el desempeño y alcance de la película.">Todo este trabajo se complementó con la administración y creación de contenidos para Instagram, además de la consolidación de reportes de taquilla y asistencia para evaluar el desempeño y alcance de la película.</p>
+<div class="project-entry">
+  <h2 class="project-title" data-en="Louis Riel or The Sky Touches the Earth" data-es="Louis Riel o El cielo toca la tierra">Louis Riel o El cielo toca la tierra</h2>
+
+  <div class="project-grid">
+    <!-- COLUMNA PRINCIPAL -->
+    <div>
+      <div class="page-body">
+        <p data-en="A comprehensive strategy covering exhibition, public relations, and social media was designed and executed." data-es="Se diseñó y ejecutó una estrategia integral de exhibición, relaciones públicas y difusión en redes sociales.">Se diseñó y ejecutó una estrategia integral de exhibición, relaciones públicas y difusión en redes sociales.</p>
+        <p data-en="The service focused on creating a strategic circuit across cultural and independent venues, encompassing programming coordination, logistical delivery of materials, and the organization of screenings with Q&amp;A sessions." data-es="El servicio se centró en la creación de un circuito estratégico en salas culturales e independientes, abarcando la coordinación de la programación, la entrega logística de materiales y la organización de funciones con sesiones de preguntas y respuestas.">El servicio se centró en la creación de un circuito estratégico en salas culturales e independientes, abarcando la coordinación de la programación, la entrega logística de materiales y la organización de funciones con sesiones de preguntas y respuestas.</p>
+        <p data-en="Press outreach was led at a national level, including drafting press releases, managing interviews, and inviting media to the premiere screening." data-es="Asimismo, se lideró el contacto con la prensa nacional mediante la redacción de boletines, la gestión de entrevistas y la convocatoria a medios para la función de estreno.">Asimismo, se lideró el contacto con la prensa nacional mediante la redacción de boletines, la gestión de entrevistas y la convocatoria a medios para la función de estreno.</p>
+        <p data-en="This work was complemented by the management and creation of Instagram content, along with the consolidation of box office and attendance reports to evaluate the film's performance and reach." data-es="Todo este trabajo se complementó con la administración y creación de contenidos para Instagram, además de la consolidación de reportes de taquilla y asistencia para evaluar el desempeño y alcance de la película.">Todo este trabajo se complementó con la administración y creación de contenidos para Instagram, además de la consolidación de reportes de taquilla y asistencia para evaluar el desempeño y alcance de la película.</p>
+      </div>
+
+      <div class="section-tag" data-en="Details" data-es="Ficha técnica">Ficha técnica</div>
+      <div class="ficha">
+        <div class="ficha-row">
+          <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+          <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+        </div>
+        <div class="ficha-row">
+          <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+          <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+        </div>
+        <div class="ficha-row">
+          <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+          <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+        </div>
+      </div>
     </div>
 
-    <div class="section-tag" data-en="Details" data-es="Ficha técnica">Ficha técnica</div>
-    <div class="ficha">
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
-        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+    <!-- SIDEBAR: PÓSTER -->
+    <div class="sidebar">
+      <div class="poster-wrap">
+        <img alt="Louis Riel o El cielo toca la tierra" src="/img/poster-louis_riel-web.jpg"/>
       </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
-        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
-      </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
-        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SIDEBAR: PÓSTER -->
-  <div class="sidebar">
-    <div class="poster-wrap">
-      <img alt="Louis Riel o El cielo toca la tierra" src="/img/poster-louis_riel-web.jpg"/>
     </div>
   </div>
 </div>
