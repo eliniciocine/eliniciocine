@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-es="Consultoría — el inicio cine" data-en="Consulting — el inicio cine">Consultoría — el inicio cine</title>
+<meta content="index, follow" name="robots"/>
+<meta content="el inicio cine" property="og:site_name"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #1a1a1a; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); -webkit-font-smoothing: antialiased; }
+
+nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid var(--dark); position: sticky; top: 0; background: var(--cream); z-index: 100; }
+.logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 72px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--red); }
+
+.page-wrap {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 3rem 4% 6rem;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 4rem;
+    align-items: start;
+}
+
+.back-link { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 2rem; transition: color 0.15s; }
+.back-link:hover { color: var(--dark); }
+
+.page-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 2rem; }
+
+.page-body { font-size: 1.02rem; font-weight: 300; line-height: 1.95; color: #1a1a1a; }
+.page-body p + p { margin-top: 1.25rem; }
+
+.section-tag { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-top: 3rem; margin-bottom: 1.25rem; border-top: 1.5px solid var(--dark); padding-top: 1.5rem; }
+
+.ficha { display: flex; flex-direction: column; gap: 0.6rem; }
+.ficha-row { display: flex; gap: 0.75rem; font-size: 0.85rem; line-height: 1.5; }
+.ficha-label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); min-width: 110px; flex-shrink: 0; padding-top: 0.05rem; }
+.ficha-value { font-weight: 300; color: var(--dark); }
+
+.sidebar { position: sticky; top: 6rem; }
+.poster-wrap { border: 1.5px solid var(--dark); overflow: hidden; }
+.poster-wrap img { width: 100%; height: auto; display: block; }
+.poster-placeholder { width: 100%; aspect-ratio: 2 / 3; background: #f0f0f0; display: flex; align-items: center; justify-content: center; }
+.poster-placeholder span { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; }
+
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
+.lang-btn.active{color:var(--blue);font-size:.88rem;}
+.lang-btn:not(.active){color:var(--muted);}
+.lang-btn:hover{color:var(--dark);}
+
+@media (max-width: 768px) {
+    .page-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sidebar { position: static; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
+</head>
+<body>
+<nav>
+<a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
+<div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
+<li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="About us" data-es="Quiénes somos" href="/#quienes">Quiénes somos</a></li>
+<li><a class="active" data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
+<li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
+</ul>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .15rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+</div>
+</nav>
+
+<div class="page-wrap">
+  <!-- COLUMNA PRINCIPAL -->
+  <div>
+    <a class="back-link" data-en="← Back" data-es="← Inicio" href="/">← Inicio</a>
+    <h1 class="page-title" data-en="Consulting" data-es="Consultoría">Consultoría</h1>
+
+    <div class="page-body">
+      <p data-en="[English text goes here]" data-es="[Texto en español aquí]">[Texto en español aquí]</p>
+    </div>
+
+    <div class="section-tag" data-en="Details" data-es="Ficha técnica">Ficha técnica</div>
+    <div class="ficha">
+      <div class="ficha-row">
+        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+      </div>
+      <div class="ficha-row">
+        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+      </div>
+      <div class="ficha-row">
+        <span class="ficha-label" data-en="Label" data-es="Etiqueta">Etiqueta</span>
+        <span class="ficha-value" data-en="[Value]" data-es="[Valor]">[Valor]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR: PÓSTER -->
+  <div class="sidebar">
+    <div class="poster-wrap">
+      <!-- Reemplaza el src con la ruta real del póster -->
+      <div class="poster-placeholder"><span data-en="Poster" data-es="Póster">Póster</span></div>
+      <!-- <img alt="Consultoría — el inicio cine" src="/img/consultoria-poster.jpg"/> -->
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l;localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
