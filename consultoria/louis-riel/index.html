@@ -31,10 +31,10 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 
 .section-tag { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-top: 3rem; margin-bottom: 1.25rem; border-top: 1.5px solid var(--dark); padding-top: 1.5rem; }
 
-.ficha { display: flex; flex-direction: column; gap: 0.6rem; }
-.ficha-row { display: flex; gap: 0.75rem; font-size: 0.85rem; line-height: 1.5; }
-.ficha-label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); min-width: 110px; flex-shrink: 0; padding-top: 0.05rem; }
-.ficha-value { font-weight: 300; color: var(--dark); }
+.ficha { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 2rem; }
+.ficha-row { display: contents; }
+.ficha-label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); align-self: start; padding-top: 0.15rem; white-space: nowrap; }
+.ficha-value { font-size: 0.85rem; font-weight: 300; color: var(--dark); line-height: 1.5; }
 
 .film-meta { font-size: 0.85rem; font-weight: 300; color: var(--blue); margin-bottom: 2rem; }
 .sidebar { position: sticky; top: 6rem; }
@@ -94,26 +94,6 @@ nav { padding: 1.25rem 4%; display: flex; justify-content: space-between; align-
 
     <div class="section-tag" data-en="Details" data-es="Ficha técnica">Ficha técnica</div>
     <div class="ficha">
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Direction" data-es="Dirección">Dirección</span>
-        <span class="ficha-value">Matías Meyer</span>
-      </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Genre" data-es="Género">Género</span>
-        <span class="ficha-value" data-en="Fiction" data-es="Ficción">Ficción</span>
-      </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Country" data-es="País">País</span>
-        <span class="ficha-value" data-en="Canada, Mexico" data-es="Canadá, México">Canadá, México</span>
-      </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Year" data-es="Año">Año</span>
-        <span class="ficha-value">2024</span>
-      </div>
-      <div class="ficha-row">
-        <span class="ficha-label" data-en="Runtime" data-es="Duración">Duración</span>
-        <span class="ficha-value">83 min</span>
-      </div>
       <div class="ficha-row">
         <span class="ficha-label" data-en="Language" data-es="Idioma">Idioma</span>
         <span class="ficha-value" data-en="English and French" data-es="Inglés y francés">Inglés y francés</span>
