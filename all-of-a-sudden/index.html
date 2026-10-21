@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9634536G3B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9634536G3B');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All of a Sudden — el inicio cine</title>
+<meta content="All of a Sudden (El sentido de la vida), de Ryūsuke Hamaguchi. Distribuida en México por el inicio cine." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="el inicio cine" property="og:site_name"/>
+<meta content="All of a Sudden — el inicio cine" property="og:title"/>
+<meta content="All of a Sudden (El sentido de la vida), de Ryūsuke Hamaguchi. Distribuida en México por el inicio cine." property="og:description"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Movie","name":"All of a Sudden","alternateName":"El sentido de la vida","director":{"@type":"Person","name":"Ryūsuke Hamaguchi"},"datePublished":"2026","description":"Marie-Lou, directora de una residencia para personas mayores, se esfuerza por implementar una filosofía de cuidado innovadora, basada en la escucha y en el respeto a la dignidad de los residentes, pese a la resistencia de una parte de su personal. Su encuentro con Mari, una directora de teatro japonesa que lucha contra el cáncer, transformará profundamente su camino. Al forjar una amistad profunda y solidaria, ambas mujeres unen fuerzas en una lucha compartida para «hacer posible lo imposible»."}</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #ffffff; --red: #C8392A; --blue: #5B70D4; --dark: #1a1a1a; --muted: #1a1a1a; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); -webkit-font-smoothing: antialiased; }
+
+nav {
+    padding: 1.25rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid var(--dark);
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    z-index: 100;
+}
+.logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 72px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--dark); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover { color: var(--red); }
+
+/* STILLS */
+.stills-wrap { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1.5px solid var(--dark); }
+.still-item { aspect-ratio: 16 / 9; overflow: hidden; border-right: 1.5px solid var(--dark); }
+.still-item:last-child { border-right: none; }
+.still-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.still-item:hover img { transform: scale(1.04); }
+
+/* MAIN GRID */
+.film-main {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 3rem 4% 4rem;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 4rem;
+}
+
+/* LEFT */
+.film-left {}
+
+.film-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.0;
+    margin-bottom: 0.5rem;
+}
+
+.film-meta {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.film-awards {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.film-synopsis {
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.95;
+    color: #1a1a1a;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Festivals */
+.section-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.17rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.6rem;
+}
+
+.festival-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    align-items: baseline;
+}
+
+.festival-item:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+
+.fest-name {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.fest-section {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.fest-place {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* RIGHT SIDEBAR */
+.film-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 0.25rem;
+}
+
+.trailer-thumb {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1.5px solid var(--dark);
+}
+.trailer-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, filter 0.35s; filter: brightness(0.88); }
+.trailer-thumb:hover img { transform: scale(1.04); filter: brightness(0.65); }
+.play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.play-btn svg { width: 44px; height: 44px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.4)); transition: transform 0.3s; }
+.trailer-thumb:hover .play-btn svg { transform: scale(1.1); }
+
+.presskit-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    text-decoration: none;
+    color: var(--dark);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    transition: opacity 0.15s;
+}
+.presskit-btn:hover { opacity: 0.55; }
+.presskit-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+.presskit-sub { font-size: 0.68rem; font-weight: 300; color: var(--muted); }
+.download-arrow { margin-left: auto; font-size: 0.9rem; color: var(--muted); }
+
+.letterboxd-btn { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border: 1.5px solid var(--dark); text-decoration: none; color: var(--dark); transition: background 0.15s; }
+.letterboxd-btn:hover { background: rgba(0,0,0,0.04); }
+.letterboxd-left { display: flex; align-items: center; gap: 0.85rem; }
+.letterboxd-logo { width: 42px; height: auto; flex-shrink: 0; }
+.letterboxd-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+.letterboxd-sub { font-size: 0.68rem; font-weight: 300; color: var(--muted); }
+.letterboxd-arrow { color: var(--muted); font-size: 1rem; }
+
+@media (max-width: 900px) {
+    .film-main { grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+    .film-left { padding-bottom: 0; }
+    .event-card { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 600px) {
+    .stills-wrap { grid-template-columns: repeat(3, 1fr); }
+    .nav-links { gap: 1.25rem; }
+}
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.lang-toggle { display: flex; align-items: center; gap: 0.35rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; border-left: 1.5px solid rgba(0,0,0,0.12); padding-left: 1.5rem; }
+.lang-current { color: var(--dark); }
+.lang-sep { color: var(--muted); }
+.lang-link { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.lang-link:hover { color: var(--dark); }
+
+/* PRESS */
+.press-section { max-width: 1050px; margin: 0 auto; padding: 2rem 4% 0.5rem; }
+.press-link { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; padding: 0.7rem 0; border-bottom: 1px solid rgba(0,0,0,0.07); text-decoration: none; color: inherit; transition: opacity 0.15s; }
+.press-link:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+.press-link:hover { opacity: 0.55; }
+.press-title { font-size: 0.95rem; font-weight: 400; }
+.press-source { font-size: 0.72rem; font-weight: 300; color: var(--muted); flex-shrink: 0; }
+
+/* EVENTS */
+.events-section { border-top: 1.5px solid var(--dark); padding: 2.5rem 4% 3rem; margin-top: 2rem; }
+.events-inner { max-width: 1050px; margin: 0 auto; }
+.event-card { display: grid; grid-template-columns: 140px 1fr; gap: 3rem; padding: 2rem 0; border-bottom: 1px solid rgba(0,0,0,0.07); align-items: start; }
+.event-card:first-of-type { border-top: 1px solid rgba(0,0,0,0.07); }
+.event-date { font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.event-venue { font-size: 0.75rem; font-weight: 400; color: var(--dark); margin-top: 0.3rem; line-height: 1.4; }
+.event-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.85; color: #1a1a1a; margin-bottom: 1.5rem; }
+.event-guests { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.25rem; }
+.guest-item { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; text-align: center; }
+.guest-item img { width: 108px; height: 108px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(0,0,0,0.08); }
+.guest-name { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--dark); max-width: 90px; line-height: 1.3; }
+.event-logos { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
+.event-logos img { height: 48px; width: auto; object-fit: contain; }
+
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:0;transition:color .15s;}
+.lang-btn.active{color:var(--blue);font-size:.88rem;}
+.lang-btn:not(.active){color:var(--muted);}
+.lang-btn:hover{color:var(--dark);}
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1.5px solid var(--dark); padding: 1rem 4%; gap: 1rem; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav { position: relative; }
+}
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+}
+</style>
+<link href="https://www.eliniciocine.mx/all-of-a-sudden/" rel="canonical"/>
+<link href="/img/favicon.png" rel="icon" type="image/png"/>
+<meta content="https://www.eliniciocine.mx/all-of-a-sudden/" property="og:url"/>
+<meta content="https://www.eliniciocine.mx/img/og.png" property="og:image"/>
+<meta content="512" property="og:image:width"/>
+<meta content="512" property="og:image:height"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@eliniciocine" name="twitter:site"/>
+<meta content="All of a Sudden — el inicio cine" name="twitter:title"/>
+<meta content="All of a Sudden (El sentido de la vida), de Ryūsuke Hamaguchi. Distribuida en México por el inicio cine." name="twitter:description"/>
+<meta content="https://www.eliniciocine.mx/img/og.png" name="twitter:image"/></head>
+<body>
+<nav>
+<a class="logo" href="/"><img alt="el inicio cine" src="/img/logos pngs/EIC_Wordmark_Negro.png"/></a>
+<div class="nav-right">
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a data-en="Screenings" data-es="Cartelera" href="/#cartelera">Cartelera</a></li>
+<li><a data-en="Partnerships" data-es="Alianzas" href="/alianzas/">Alianzas</a></li>
+<li><a data-en="About us" data-es="Quiénes somos" href="/#quienes">Quiénes somos</a></li>
+<li><a data-en="Services" data-es="Servicios" href="/#servicios">Servicios</a></li>
+<li><a data-en="Contact" data-es="Contacto" href="/#contacto">Contacto</a></li>
+</ul>
+<div class="lang-toggle"><button class="lang-btn active" data-lang="es">ES</button><span style="color:var(--muted);font-size:.72rem;font-weight:700;padding:0 .15rem;">/</span><button class="lang-btn" data-lang="en">EN</button></div>
+</div>
+</nav>
+<div class="stills-wrap">
+<div class="still-item"><img alt="" src="/img/stills/AOAS still 1.jpg" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/AOAS still 2.jpg" loading="lazy"/></div>
+<div class="still-item"><img alt="" src="/img/stills/AOAS still 3.jpg" loading="lazy"/></div>
+</div>
+<div class="film-main">
+<div class="film-left">
+<div class="film-title" data-en="All of a Sudden" data-es="All of a Sudden&lt;br/&gt;&lt;span style=&quot;font-size:0.45em;font-weight:500;&quot;&gt;(El sentido de la vida)&lt;/span&gt;">All of a Sudden<br/><span style="font-size:0.45em;font-weight:500;">(El sentido de la vida)</span></div>
+<div class="film-meta" style="color:var(--blue);" data-en="Ryūsuke Hamaguchi · 2026 · France, Japan · 196 min" data-es="Ryūsuke Hamaguchi · 2026 · Francia, Japón · 196 min">Ryūsuke Hamaguchi · 2026 · Francia, Japón · 196 min</div>
+<p class="film-synopsis" data-en="Marie-Lou, the director of a nursing home, strives to implement an innovative philosophy of care grounded in listening and in respect for the residents’ dignity, despite resistance from part of her staff. Her encounter with Mari, a Japanese theater director battling cancer, will profoundly transform her path. As they forge a deep and supportive friendship, the two women join forces in a shared struggle to “make the impossible possible.”" data-es="Marie-Lou, directora de una residencia para personas mayores, se esfuerza por implementar una filosofía de cuidado innovadora, basada en la escucha y en el respeto a la dignidad de los residentes, pese a la resistencia de una parte de su personal. Su encuentro con Mari, una directora de teatro japonesa que lucha contra el cáncer, transformará profundamente su camino. Al forjar una amistad profunda y solidaria, ambas mujeres unen fuerzas en una lucha compartida para «hacer posible lo imposible».">Marie-Lou, directora de una residencia para personas mayores, se esfuerza por implementar una filosofía de cuidado innovadora, basada en la escucha y en el respeto a la dignidad de los residentes, pese a la resistencia de una parte de su personal. Su encuentro con Mari, una directora de teatro japonesa que lucha contra el cáncer, transformará profundamente su camino. Al forjar una amistad profunda y solidaria, ambas mujeres unen fuerzas en una lucha compartida para «hacer posible lo imposible».</p>
+<div class="section-tag" data-en="Festivals &amp; Awards" data-es="Festivales y premios">Festivales y premios</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="Cannes Film Festival" data-es="Festival Internacional de Cine de Cannes">Festival Internacional de Cine de Cannes</div>
+<span class="fest-section" data-en="World Premiere<br/>Best Actress Award, shared by Virginie Efira and Tao Okamoto" data-es="Estreno mundial<br/>Premio a Mejor Actriz, compartido por Virginie Efira y Tao Okamoto">Estreno mundial<br/>Premio a Mejor Actriz, compartido por Virginie Efira y Tao Okamoto</span>
+</div>
+<div class="fest-place" data-en="France · 2026" data-es="Francia · 2026">Francia · 2026</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="Locarno Film Festival" data-es="Festival Internacional de Cine de Locarno">Festival Internacional de Cine de Locarno</div>
+<span class="fest-section" data-en="Leopard Club Award to Virginie Efira, for her career" data-es="Leopard Club Award a Virginie Efira, por su trayectoria">Leopard Club Award a Virginie Efira, por su trayectoria</span>
+</div>
+<div class="fest-place" data-en="Switzerland · 2026" data-es="Suiza · 2026">Suiza · 2026</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="Academy Awards" data-es="Premios Óscar">Premios Óscar</div>
+<span class="fest-section" data-en="Japan’s submission for Best International Feature Film" data-es="Candidata de Japón a Mejor Película Internacional">Candidata de Japón a Mejor Película Internacional</span>
+</div>
+<div class="fest-place" data-en="USA · 2027" data-es="Estados Unidos · 2027">Estados Unidos · 2027</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="New York Film Festival" data-es="New York Film Festival">New York Film Festival</div>
+</div>
+<div class="fest-place" data-en="USA · 2026" data-es="Estados Unidos · 2026">Estados Unidos · 2026</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="Morelia International Film Festival" data-es="Festival Internacional de Cine de Morelia">Festival Internacional de Cine de Morelia</div>
+</div>
+<div class="fest-place" data-en="Mexico · 2026" data-es="México · 2026">México · 2026</div>
+</div>
+<div class="festival-item">
+<div>
+<div class="fest-name" data-en="UNAM International Film Festival" data-es="Festival Internacional de Cine UNAM">Festival Internacional de Cine UNAM</div>
+</div>
+<div class="fest-place" data-en="Mexico · 2026" data-es="México · 2026">México · 2026</div>
+</div>
+</div>
+<div class="film-right">
+<a class="trailer-thumb" href="https://www.youtube.com/watch?v=XZ5JMSgl8p0" target="_blank">
+<img alt="Tráiler — All of a Sudden" src="https://img.youtube.com/vi/XZ5JMSgl8p0/maxresdefault.jpg" loading="lazy"/>
+<div class="play-btn">
+<svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" fill="rgba(255,255,255,0.88)" r="22"></circle>
+<polygon fill="#1a1a1a" points="18,14 34,22 18,30"></polygon>
+</svg>
+</div>
+</a>
+<a class="letterboxd-btn" href="https://letterboxd.com/film/all-of-a-sudden-2026/" rel="noopener" target="_blank">
+<div class="letterboxd-left">
+<svg class="letterboxd-logo" fill="none" viewbox="0 0 57 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" fill="#00E054" r="12"></circle><circle cx="28.5" cy="12" fill="#40BCF4" r="12"></circle><circle cx="45" cy="12" fill="#FF8000" r="12"></circle></svg>
+<div>
+<div class="letterboxd-label" data-en="See on Letterboxd" data-es="Ver en Letterboxd">Ver en Letterboxd</div>
+<div class="letterboxd-sub" data-en="Reviews &amp; Ratings" data-es="Reseñas y valoraciones">Reseñas y valoraciones</div>
+</div>
+</div>
+<span class="letterboxd-arrow">↗</span>
+</a>
+</div>
+</div>
+<!-- CRÍTICAS Y PRENSA -->
+<div class="press-section">
+<div class="section-tag" data-en="Press &amp; Reviews" data-es="Críticas y prensa">Críticas y prensa</div>
+<a class="press-link" href="https://variety-com.translate.goog/2026/film/reviews/all-of-a-sudden-review-ryusuke-hamaguchi-1236748900/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc" target="_blank">
+<span class="press-title" data-en="‘All of a Sudden’ Review: Virginie Efira and Tao Okamoto Forge a Life-Changing Friendship in Ryusuke Hamaguchi’s Life-Giving Drama" data-es="‘All of a Sudden’ Review: Virginie Efira and Tao Okamoto Forge a Life-Changing Friendship in Ryusuke Hamaguchi’s Life-Giving Drama">‘All of a Sudden’ Review: Virginie Efira and Tao Okamoto Forge a Life-Changing Friendship in Ryusuke Hamaguchi’s Life-Giving Drama</span>
+<span class="press-source">Variety →</span>
+</a>
+<a class="press-link" href="https://www.elantepenultimomohicano.com/2026/05/critica-all-of-a-sudden.html" target="_blank">
+<span class="press-title" data-en="Giving us back our humanity" data-es="Devolvernos la humanidad">Devolvernos la humanidad</span>
+<span class="press-source">El antepenúltimo mohicano →</span>
+</a>
+<a class="press-link" href="https://elpais.com/cultura/cine/2026-05-16/el-sentido-de-la-vida-cuando-se-espera-la-muerte-aterriza-en-cannes.html" target="_blank">
+<span class="press-title" data-en="The meaning of life while awaiting death lands in Cannes" data-es="El sentido de la vida cuando se espera la muerte aterriza en Cannes">El sentido de la vida cuando se espera la muerte aterriza en Cannes</span>
+<span class="press-source">El País →</span>
+</a>
+</div>
+<script>
+(function(){
+  var lang=localStorage.getItem('eic-lang')||'es';
+  function setLang(l){
+    lang=l;localStorage.setItem('eic-lang',l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=el.getAttribute('data-'+l);}
+      else{el.innerHTML=el.getAttribute('data-'+l);}});
+    document.documentElement.lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+    setLang(lang);
+  });
+})();
+</script><script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var nav = document.querySelector('.nav-links');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !nav.contains(e.target)){
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
