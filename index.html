@@ -187,6 +187,11 @@ nav {
     padding-top: 2rem;
 }
 
+.film-grid:not(.expanded) .film-card:nth-child(n+4) { display: none; }
+
+.catalog-more { display: flex; justify-content: center; padding: 0 4% 3rem; }
+.catalog-more .filter-btn { font-size: 0.75rem; padding: 0.6rem 1.6rem; }
+
 .film-card.proximamente::after {
     content: 'Próximamente';
     position: absolute;
@@ -648,6 +653,7 @@ footer a { color: var(--red); text-decoration: none; }
     .hero { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .hero-sub { font-size: 0.78rem; text-align: left; align-self: flex-start; }
     .film-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; padding: 1.5rem 4% 2rem; }
+    .film-grid:not(.expanded) .film-card:nth-child(4) { display: block; }
     .nav-links { gap: 1.25rem; }
     .cal-columns { grid-template-columns: 1fr; gap: 0; }
     .cal-row { grid-template-columns: 52px 1fr 80px; gap: 0.75rem; padding: 0.85rem 0; }
@@ -789,6 +795,7 @@ footer a { color: var(--red); text-decoration: none; }
 </div>
 </a>
 </div>
+<div class="catalog-more"><button class="filter-btn" id="catalog-more-btn" data-en="See more ↓" data-es="Ver más ↓">Ver más ↓</button></div>
 <!-- CARTELERA -->
 <div class="section-label" data-en="Screenings" data-es="Cartelera" id="cartelera" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Cartelera</div>
 <div class="calendar-wrap">
@@ -949,6 +956,18 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   document.addEventListener('DOMContentLoaded',function(){
     document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
     setLang(lang);
+  });
+})();
+</script><script>
+(function(){
+  var btn = document.getElementById('catalog-more-btn');
+  var grid = document.querySelector('.film-grid');
+  btn.addEventListener('click', function(){
+    var open = grid.classList.toggle('expanded');
+    btn.setAttribute('data-es', open ? 'Ver menos ↑' : 'Ver más ↓');
+    btn.setAttribute('data-en', open ? 'See less ↑' : 'See more ↓');
+    btn.innerHTML = btn.getAttribute('data-' + (localStorage.getItem('eic-lang')||'es'));
+    if(!open){ document.getElementById('catalogo').scrollIntoView(); }
   });
 })();
 </script><script>
