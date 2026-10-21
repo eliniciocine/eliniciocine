@@ -189,8 +189,23 @@ nav {
 
 .film-grid:not(.expanded) .film-card:nth-child(n+4) { display: none; }
 
-.catalog-more { display: flex; justify-content: center; padding: 0 4% 3rem; }
-.catalog-more .filter-btn { font-size: 0.75rem; padding: 0.6rem 1.6rem; }
+.catalog-more { display: flex; justify-content: center; padding: 0 4% 3.5rem; }
+.catalog-more-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background: var(--red);
+    color: #fff;
+    border: 1.5px solid var(--red);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.catalog-more-btn:hover { background: var(--dark); border-color: var(--dark); transform: translateY(-2px); }
+@media (max-width: 600px) { .catalog-more-btn { width: 100%; } }
 
 .film-card.proximamente::after {
     content: 'Próximamente';
@@ -722,6 +737,24 @@ footer a { color: var(--red); text-decoration: none; }
 <!-- CATÁLOGO -->
 <div class="section-label" data-en="Our catalog" data-es="Nuestro catálogo" id="catalogo" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Nuestro catálogo</div>
 <div class="film-grid">
+<a class="film-card proximamente" href="/all-of-a-sudden/">
+<div class="film-poster">
+<img alt="All of a Sudden" src="/img/AOAS_ AFICHE_ EIC.jpg" loading="lazy" style="object-fit: contain; background: #fedaf8;"/>
+</div>
+<div class="film-info">
+<div class="film-title" data-en="All of a Sudden" data-es="All of a Sudden">All of a Sudden</div>
+<div class="film-meta"><span style="color:var(--blue);">Ryūsuke Hamaguchi</span><br/><span data-en="France, Japan · 2026" data-es="Francia, Japón · 2026">Francia, Japón · 2026</span></div>
+</div>
+</a>
+<a class="film-card proximamente" href="/ciudad-sin-sueno/">
+<div class="film-poster">
+<img alt="Ciudad sin sueño" src="/img/CSS_ AFICHE_ EIC.jpg" loading="lazy"/>
+</div>
+<div class="film-info">
+<div class="film-title" data-en="Sleepless City" data-es="Ciudad sin sueño">Ciudad sin sueño</div>
+<div class="film-meta"><span style="color:var(--blue);">Guillermo Galoe</span><br/><span data-en="Spain, France · 2025" data-es="España, Francia · 2025">España, Francia · 2025</span></div>
+</div>
+</a>
 <a class="film-card" href="/la-hora-de-la-estrella/">
 <div class="film-poster">
 <img alt="La hora de la estrella" src="/img/HoraDaEstrela_Alternativo_64x94.jpg" loading="lazy"/>
@@ -749,15 +782,6 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="film-meta"><span style="color:var(--blue);">Tatiana Mazú González</span><br/>Argentina · 2024</div>
 </div>
 </a>
-<a class="film-card proximamente" href="/all-of-a-sudden/">
-<div class="film-poster">
-<img alt="All of a Sudden" src="/img/AOAS_ AFICHE_ EIC.jpg" loading="lazy" style="object-fit: contain; background: #fedaf8;"/>
-</div>
-<div class="film-info">
-<div class="film-title" data-en="All of a Sudden" data-es="All of a Sudden">All of a Sudden</div>
-<div class="film-meta"><span style="color:var(--blue);">Ryūsuke Hamaguchi</span><br/><span data-en="France, Japan · 2026" data-es="Francia, Japón · 2026">Francia, Japón · 2026</span></div>
-</div>
-</a>
 <a class="film-card proximamente" href="/silvia-prieto/">
 <div class="film-poster">
 <img alt="Silvia Prieto" src="/img/SP_ AFICHE_ EIC.jpg" loading="lazy" style="object-fit: contain; background: #f8f4ef;"/>
@@ -765,15 +789,6 @@ footer a { color: var(--red); text-decoration: none; }
 <div class="film-info">
 <div class="film-title" data-en="Silvia Prieto" data-es="Silvia Prieto">Silvia Prieto</div>
 <div class="film-meta"><span style="color:var(--blue);">Martín Rejtman</span><br/><span data-en="Argentina · 1999" data-es="Argentina · 1999">Argentina · 1999</span></div>
-</div>
-</a>
-<a class="film-card proximamente" href="/ciudad-sin-sueno/">
-<div class="film-poster">
-<img alt="Ciudad sin sueño" src="/img/CSS_ AFICHE_ EIC.jpg" loading="lazy"/>
-</div>
-<div class="film-info">
-<div class="film-title" data-en="Sleepless City" data-es="Ciudad sin sueño">Ciudad sin sueño</div>
-<div class="film-meta"><span style="color:var(--blue);">Guillermo Galoe</span><br/><span data-en="Spain, France · 2025" data-es="España, Francia · 2025">España, Francia · 2025</span></div>
 </div>
 </a>
 <a class="film-card proximamente" href="/si-no-ardemos/">
@@ -795,7 +810,7 @@ footer a { color: var(--red); text-decoration: none; }
 </div>
 </a>
 </div>
-<div class="catalog-more"><button class="filter-btn" id="catalog-more-btn" data-en="See more ↓" data-es="Ver más ↓">Ver más ↓</button></div>
+<div class="catalog-more"><button class="catalog-more-btn" id="catalog-more-btn" data-en="See more ↓" data-es="Ver más ↓">Ver más ↓</button></div>
 <!-- CARTELERA -->
 <div class="section-label" data-en="Screenings" data-es="Cartelera" id="cartelera" style="font-size: 1.8rem; font-weight: 900; letter-spacing: -0.02em; padding: 1rem 4% 0.75rem; line-height: 1; color: var(--dark); text-transform: uppercase;">Cartelera</div>
 <div class="calendar-wrap">
